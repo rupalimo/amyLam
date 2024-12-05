@@ -1,3 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>top-menu</title>
+
+		<meta name="title" content="top-menu" />
+		<meta name="description" content="--sketches--" />
+
+		<link rel="stylesheet" type="text/css" href="style.css" />
+
+		<!-- for p5.js -->
+		<!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+		<script async src="script.js"></script> -->
+    <script async src="script.js"></script>
+	</head>
+
+	<body>
+
+
+		<!-- TOP MENU -->
+		<header>
+			<nav class="tab__container">
+				<button class="tabitems" onclick="openTab(event, 'Amy')">
+					Amy Ching-Yan Lam
+				</button>
+				<button class="tabitems" id="defaultOpen" onclick="openTab(event, 'Projects')">
+					Projects
+				</button>
+				<button class="tabitems" onclick="openTab(event, 'News')">News</button>
+				<button class="tabitems" onclick="openTab(event, 'Press')">
+					Press
+				</button>
+			</nav>
+		</header>
+
+		<!-- MAIN CONTENT STARTS HERE -->
+		<main>
+			<!-- 01 AMY LAM / ABOUT -->
+			<div id="Amy" class="tabcontent">
+				<h1>Amy</h1>
+			</div>
+
+			<!-- 02 PROJECTS -->
+			<div id="Projects" class="tabcontent">
+				<h1>Projects</h1>
+			</div>
+			<!-- 03 NEWS -->
+			<div id="News" class="tabcontent">
+				<h1>News</h1>
+			</div>
+			<!-- 04 PRESS -->
+			<div id="Press" class="tabcontent">
+				<h1>Press</h1>
+			</div>
+
+			<!-- END OF MAIN CONTENT -->
+		</main>
+	</body>
 </html>
