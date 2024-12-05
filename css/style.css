@@ -1,0 +1,31 @@
+:root {
+	--primary-font: serif;
+	--secondary-font: sans-serif;
+	--text-color: #000;
+	--highlight: rgb(205, 248, 160);
+	--fade-in-effect: fadein 800ms;
+	font-size: calc(1em + 0.5vw);
+	font-family: var(--primary-font);
+	color: var(--text-color);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+::selection {
+	background-color: var(--highlight);
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
