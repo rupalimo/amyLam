@@ -42,7 +42,12 @@ body {
 body {
 	width: 100vw;
 	height: 100vh;
+}
 
+/* TOP-MENU */
+header {
+	position: sticky;
+  top: 0;
 }
 
 /* Style the tab */
@@ -90,12 +95,38 @@ color: rgb(0, 0, 0);
 .tab__container button.active:hover {
 transition: linear 0.075s;
 border:1px solid rgba(217, 217, 255, 0);
-	background: rgba(84, 212, 255, 0.1);
-	  box-shadow: rgba(84, 212, 255, 0.1) 0px 3px 8px, rgba(84, 212, 255, 0.1) 0px -3px 8px;
+	background: rgba(84, 212, 255, 0.25);
+	  box-shadow: rgba(84, 212, 255, 0.25) 0px 3px 8px, rgba(84, 212, 255, 0.25) 0px -3px 8px;
 }
 
 /* Style the tab content */
 .tabcontent {
 	display: none;
 	animation: var(--fade-in-effect);
+	margin: 1rem;
+	overflow-x: hidden;
+}
+
+
+/* LANDING PAGE (PROJECTS) LAYOUT */
+
+span {
+border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+display: inline-block;
+  width: 100%;
+}
+
+.project--spotlight {
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+}
+
+.project--spotlight img {
+	width: 100%;
+	height: auto;
+}
+
+.p--nav {
+	font-family: var(--secondary-font);
+	font-size: 1.65rem;
 }
