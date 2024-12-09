@@ -48,6 +48,9 @@ body {
 .tab__container {
 	overflow: hidden;
 	width: inherit;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -60,7 +63,7 @@ body {
 	padding: 1rem;
 	border-radius: 100%;
 	transition: 0.3s;
-	min-width: 25%;
+	min-width: 15%;
 	font-family: var(--primary-font);
 	font-size: 1.25rem;
 }
@@ -73,6 +76,7 @@ body {
 /* Create an active/current tablink class */
 .tab__container button.active {
 	background: var(--highlight);
+	flex-grow: 1;
 }
 
 /* Style the tab content */
