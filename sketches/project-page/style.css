@@ -1,0 +1,101 @@
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+:root {
+	--primary-font: serif;
+	--secondary-font: sans-serif;
+	--text-color: #000;
+	--highlight: rgb(247, 255, 235);
+	--fade-in-effect: fadeIn 1s;
+	font-size: 16px;
+	font-family: var(--primary-font);
+	color: var(--text-color);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+::selection {
+	background-color: var(--highlight);
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+
+}
+
+/* Style the tab */
+.tab__container {
+	overflow: hidden;
+	width: inherit;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	padding: 0.5rem;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab__container button {
+	background-color: rgba(255, 255, 255, 0);
+	float: left;
+	border: 1px solid hsla(0, 0%, 0%, 0.2);
+	color: rgba(0, 0, 0, 0.75);
+	outline: none;
+	cursor: pointer;
+	padding: 1rem;
+	border-radius: 100%;
+	transition: 0.3s;
+	min-width: 15%;
+	font-family: var(--primary-font);
+	font-size: 1.25rem;
+	margin: 3px;
+}
+
+/* Change background color of buttons on hover */
+.tab__container button:hover {
+border:1px solid rgba(0, 0, 0, 0.75);
+color: rgb(0, 0, 0);
+}
+
+/* Create an active/current tablink class */
+.tab__container button.active {
+	background: rgba(84, 212, 255, 0.10);
+	flex-grow: 1;
+	border:1px solid #3bd9ff;
+	color: rgb(0, 0, 0);
+	z-index: 10;
+}
+
+.tab__container button.active:hover {
+transition: linear 0.075s;
+border:1px solid rgba(217, 217, 255, 0);
+	background: rgba(84, 212, 255, 0.1);
+	  box-shadow: rgba(84, 212, 255, 0.1) 0px 3px 8px, rgba(84, 212, 255, 0.1) 0px -3px 8px;
+}
+
+/* Style the tab content */
+.tabcontent {
+	display: none;
+	animation: var(--fade-in-effect);
+}

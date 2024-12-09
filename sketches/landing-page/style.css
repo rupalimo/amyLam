@@ -82,7 +82,7 @@ color: rgb(0, 0, 0);
 .tab__container button.active {
 	background: rgba(84, 212, 255, 0.10);
 	flex-grow: 1;
-	border:1px solid #acefff;
+	border:1px solid #3bd9ff;
 	color: rgb(0, 0, 0);
 	z-index: 10;
 }
