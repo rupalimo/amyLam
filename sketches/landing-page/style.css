@@ -103,7 +103,7 @@ border:1px solid rgba(217, 217, 255, 0);
 .tabcontent {
 	display: none;
 	animation: var(--fade-in-effect);
-	margin: 1rem;
+	margin: 1rem 2rem;
 	overflow-x: hidden;
 }
 
@@ -114,11 +114,13 @@ span {
 border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 display: inline-block;
   width: 100%;
+	padding-bottom: 1rem;
 }
 
 .project--spotlight {
 	display: grid;
 	grid-template-columns: repeat(2, 50%);
+	margin: 1rem 0;
 }
 
 .project--spotlight img {
@@ -126,7 +128,38 @@ display: inline-block;
 	height: auto;
 }
 
-.p--nav {
+.p__nav, .p__detail, .p__link {
 	font-family: var(--secondary-font);
+}
+
+.p__nav {
 	font-size: 1.65rem;
+}
+
+.p__detail {
+font-size: 1rem;
+  color: rgba(0, 0, 0, 0.75);
+  display: inline;
+
+}
+
+.p__link a  {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	background: black;
+	padding: 2px 2px 0 2px;
+}
+
+.p__link a:hover {
+	background: white;
+	color: black;
+	border:1px solid black;
+}
+
+h4 {
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 1.125rem;
+	margin: 1rem 0;
 }

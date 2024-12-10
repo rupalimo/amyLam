@@ -13,19 +13,21 @@
 		<!-- for p5.js -->
 		<!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
 		<script async src="script.js"></script> -->
-    <script async src="script.js"></script>
+		<script async src="script.js"></script>
 	</head>
 
 	<body>
-
-
 		<!-- TOP MENU -->
 		<header>
 			<nav class="tab__container">
 				<button class="tabitems" onclick="openTab(event, 'Amy')">
 					Amy Ching-Yan Lam
 				</button>
-				<button class="tabitems" id="defaultOpen" onclick="openTab(event, 'Projects')">
+				<button
+					class="tabitems"
+					id="defaultOpen"
+					onclick="openTab(event, 'Projects')"
+				>
 					Projects
 				</button>
 				<button class="tabitems" onclick="openTab(event, 'News')">News</button>
@@ -44,19 +46,43 @@
 
 			<!-- 02 PROJECTS -->
 			<section id="Projects" class="tabcontent">
-				<span><p class="p--nav">Amy Ching-Yan Lam is an artist and writer. She works between &#10112; what capitalism requires of life and &#10113; what it feels like to be alive.</p></span>
+				<span
+					><p class="p__nav">
+						Amy Ching-Yan Lam is an artist and writer. She works between
+						&#10112; what capitalism requires of life and &#10113; what it feels
+						like to be alive.
+					</p></span
+				>
 				<div class="project--spotlight">
 					<div>
-						<img src="imgs/property-journal.jpg" title="name of project">
+						<img src="imgs/property-journal2.jpg" title="name of project" />
 					</div>
 					<div>
 						<h4></h4>
-						<p class="p__detail">project details</p>
-						<p>Talked to Slippers about his friend who lives next door to me, where the windows have been installed upside down, with the openings at the top, not the bottom, so none of the tenants can install A/Cs. It gets extremely hot in the summer and it’s expensive. ‘Like hell,’ Slippers said.
-</p>
+						<p class="p__detail"><a>2024</a></p>
+						<p class="p__detail"><a>Book</a></p>
+<h4>Propery Journal</h4>
+						<p>
+							Talked to Slippers about his friend who lives next door to me,
+							where the windows have been installed upside down, with the
+							openings at the top, not the bottom, so none of the tenants can
+							install A/Cs. It gets extremely hot in the summer and it’s
+							expensive. ‘Like hell,’ Slippers said.
+						</p>
+						<p class="p__link">
+							<a
+								href="https://bookworks.org.uk/publishing/shop/property-journal/"
+								>Order from Book Works</a
+							>
+						</p>
 					</div>
 				</div>
-				<span><p class="p--nav">Here are <a>artworks,</a> <a>books,</a> <a>exhibitions,</a> <a>performances,</a> <a>public art,</a> <a>writings,</a> and <a>collaborations.</a></p></span>
+				<span><p class="p__nav">
+						Here are <a>artworks,</a> <a>books,</a> <a>exhibitions,</a>
+						<a>performances,</a> <a>public art,</a> <a>writings,</a> and
+						<a>collaborations.</a>
+					</p></span
+				>
 				<div class="project--index"></div>
 			</section>
 			<!-- 03 NEWS -->
