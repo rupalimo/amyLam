@@ -99,3 +99,34 @@ border:1px solid rgba(217, 217, 255, 0);
 	display: none;
 	animation: var(--fade-in-effect);
 }
+
+.project__container {
+	display: grid;
+	grid-template-columns: 26% 1fr 26%;
+	justify-items: right;
+}
+
+.project--details {
+	font-family: var(--secondary-font);
+	width: 50%;
+	position: sticky;
+	margin: 4rem;
+padding: 1rem;
+border: 1px solid var(--text-color);
+}
+
+.project--details ul {
+list-style: none;
+padding: 0;
+}
+
+
+.project--details li {
+	margin: 0;
+	font-size: 0.80rem;
+	
+}
+
+.project--content h1 {
+	text-align: center;
+}
