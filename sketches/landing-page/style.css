@@ -124,8 +124,11 @@ display: inline-block;
 }
 
 .project--spotlight img {
-	width: 100%;
+	width: 98%;
 	height: auto;
+	background:rgb(233, 233, 233);
+	
+	height: 420px;
 }
 
 .p__nav, .p__detail, .p__link {
@@ -144,17 +147,20 @@ font-size: 1rem;
 }
 
 .p__link a  {
-	color: white;
+		text-decoration: none;
+		color: rgba(0, 0, 0);
+		text-transform: uppercase;
+	/* color: white;
 	text-decoration: none;
 	text-transform: uppercase;
 	background: black;
-	padding: 2px 2px 0 2px;
+	padding: 2px 2px 0 2px; */
 }
 
 .p__link a:hover {
-	background: white;
+	/* background: white;
 	color: black;
-	border:1px solid black;
+	border:1px solid black; */
 }
 
 h4 {
