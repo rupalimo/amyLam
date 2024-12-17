@@ -10,10 +10,9 @@
 :root {
 	--primary-font: serif;
 	--secondary-font: sans-serif;
-	--menu-font: "Lack Line", sans-serif;
+	--menu-font: serif;
 	--text-color: #000;
-	--yellow-color: #ffea8b;
-	--purple-color: #957aff;
+	--second-color: rgba(0, 0, 0, 0.25);
 	--fade-in-effect: fadeIn 1s;
 	font-size: 16px;
 	font-family: var(--primary-font);
@@ -66,7 +65,7 @@ header {
 .tab__container button {
 	background-color: rgba(255, 255, 255, 0);
 	float: left;
-	border: 1px solid hsla(0, 0%, 0%, 0.2);
+	border: 1px solid rgba(0, 0, 0, 0.25);
 	color: rgba(0, 0, 0, 0.75);
 	outline: none;
 	cursor: pointer;
@@ -87,19 +86,19 @@ header {
 
 /* Create an active/current tablink class */
 .tab__container button.active {
-	background: rgba(84, 212, 255, 0.1);
+	background: rgba(0, 0, 0, 0.05);
 	flex-grow: 1;
-	border: 1px solid #3bd9ff;
-	color: rgb(0, 0, 0);
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	color: var(--text-color);
 	z-index: 10;
 }
 
 .tab__container button.active:hover {
 	transition: linear 0.075s;
-	border: 1px solid rgba(217, 217, 255, 0);
-	background: rgba(84, 212, 255, 0.25);
-	box-shadow: rgba(84, 212, 255, 0.25) 0px 3px 8px,
-		rgba(84, 212, 255, 0.25) 0px -3px 8px;
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	background: rgba(0, 0, 0, 0.10);
+	box-shadow: rgba(0, 0, 0, 0.10) 0px 3px 8px,
+		rgba(0, 0, 0, 0.10) 0px -3px 8px;
 }
 
 /* Style the tab content */
@@ -119,19 +118,17 @@ header {
 }
 
 .p__nav {
-	font-size: 1.65rem;
+
 }
 
 .p__detail {
-	font-size: 1rem;
+
 	color: rgba(0, 0, 0, 0.75);
 	display: inline;
 }
 
 .p__link a {
-	text-decoration: none;
-	color: rgba(0, 0, 0);
-	text-transform: uppercase;
+
 }
 
 .p__link a:hover {
@@ -146,21 +143,18 @@ h4 {
 
 /* landing page -- INTRO TEXT */
 span {
-	border-bottom: 1px solid var(--yellow-color);
+	border-bottom: 1px solid var(--second-color);
 	display: inline-block;
 	width: 100%;
 	padding-bottom: 1rem;
 }
 
 .p__filter {
-	text-decoration: underline;
-	text-decoration-thickness: 2px;
-	text-underline-offset: 3px;
-	text-decoration-color: var(--purple-color);
+
 }
 
 .p__filter:hover{
-font-family: ;
+
 }
 
 /* landing page -- PROJECT SPOTLIGHT */
@@ -170,7 +164,7 @@ font-family: ;
 	grid-template-columns: repeat(2, 50%);
 	grid-column-gap: 12px;
 	padding:1rem 2rem;
-	border-bottom: 1px solid var(--yellow-color);
+	border-bottom: 1px solid var(--second-color);
 }
 
 .project--spotlight img {
@@ -208,7 +202,7 @@ display: flex;
   margin-left: -1px;
   min-width: 0;
 	text-decoration: none;
-		border-right: 1px solid var(--yellow-color);
+		border-right: 1px solid var(--second-color);
 		color: var(--text-color);
 		padding:1rem 2rem
 }
@@ -228,7 +222,7 @@ display: flex;
 
 .project--item .item__line {
 margin-top: 24px;
-  border-bottom: 1px solid var(--yellow-color);
+  border-bottom: 1px solid var(--second-color);
   width: 100%;
 }
 
