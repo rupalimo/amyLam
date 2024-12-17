@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Call-reg';
+  src: url('Calligraffitti-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP-reg';
+  src: url('PPNeueMontreal-Book.otf') format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP-med';
+  src: url('PPNeueMontreal-Medium.otf') format('opentype');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PP-italic';
+  src: url('PPNeueMontreal-Italic.otf') format('opentype');
+  font-style: normal;
+}

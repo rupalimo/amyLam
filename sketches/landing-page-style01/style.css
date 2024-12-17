@@ -1,3 +1,5 @@
+@import 'fonts.css';
+
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -8,9 +10,9 @@
 }
 
 :root {
-	--primary-font: serif;
-	--secondary-font: sans-serif;
-	--menu-font: "Lack Line", sans-serif;
+	--primary-font: "PP-reg", serif;
+	--secondary-font: "Iowan Old Style", sans-serif;
+	--menu-font: "Call-reg", sans-serif;
 	--text-color: #000;
 	--yellow-color: #ffea8b;
 	--purple-color: #957aff;
@@ -115,7 +117,7 @@ header {
 .p__nav,
 .p__detail,
 .p__link {
-	font-family: var(--secondary-font);
+	font-family: var(--primary-font);
 }
 
 .p__nav {
@@ -129,9 +131,10 @@ header {
 }
 
 .p__link a {
+	font-family: "PP-med";
 	text-decoration: none;
 	color: rgba(0, 0, 0);
-	text-transform: uppercase;
+	
 }
 
 .p__link a:hover {
@@ -142,6 +145,7 @@ h4 {
 	font-weight: normal;
 	font-size: 1.125rem;
 	margin: 1rem 0;
+	font-family: var(--secondary-font);
 }
 
 /* landing page -- INTRO TEXT */
@@ -154,13 +158,16 @@ span {
 
 .p__filter {
 	text-decoration: underline;
-	text-decoration-thickness: 2px;
-	text-underline-offset: 3px;
-	text-decoration-color: var(--purple-color);
 }
 
 .p__filter:hover{
-font-family: ;
+font-family: "PP-med";
+/* text-transform: uppercase; */
+	text-decoration: none;
+	cursor: pointer;
+	padding: 0 4px;
+	transition: linear 0.075s;
+	
 }
 
 /* landing page -- PROJECT SPOTLIGHT */
