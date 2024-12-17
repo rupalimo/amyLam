@@ -10,12 +10,13 @@
 }
 
 :root {
-	--primary-font: "PP-reg", serif;
-	--secondary-font: "Iowan Old Style", sans-serif;
-	--menu-font: "Call-reg", sans-serif;
-	--filter-font: "Lack Lane"
+	--primary-font: 'PP-reg', serif;
+	--secondary-font: 'Iowan Old Style', sans-serif; 
+	--menu-font: 'Louise', sans-serif;
+	--filter1-font: 'Call-reg';
+	--filter-font: 'Lack Lane', sans-serif;
 	--text-color: #000;
-	--yellow-color: #ffea8b;
+	--divider-color: rgba(125, 176, 255, 0.15);
 	--purple-color: #957aff;
 	--fade-in-effect: fadeIn 1s;
 	font-size: 16px;
@@ -77,14 +78,16 @@ header {
 	font-family: var(--menu-font);
 	font-size: 1.25rem;
 	margin: 3px;
-border:1px solid rgba(255, 156, 1, 0.25);
-box-shadow: rgba(255, 156, 1, 0.5) 0px 0px 24px 4px inset, rgba(255, 156, 1, 0.33) 0px -3px 3px 0px inset, rgba(255, 156, 1, 0.1) 0px 0px 12px 2px inset;
-  background: rgb(255, 230, 243);
+	border: 1px solid rgba(255, 49, 1, 0.15);
+	box-shadow: rgba(255, 230, 243, 0.75) 0px 0px 24px 4px inset,
+		rgba(255, 230, 243, 0.33) 0px -3px 3px 0px inset,
+		rgba(255, 230, 243, 0.1) 0px 0px 12px 2px inset;
+	background: rgba(125, 176, 255, 0.05);
 }
 
 /* Change background color of buttons on hover */
 .tab__container button:hover {
-	border:1px solid rgba(255, 156, 1, 0.75);
+	border: 1px solid rgba(255, 49, 1, 0.25);
 	color: rgb(0, 0, 0);
 
 	background-position: right center;
@@ -92,22 +95,24 @@ box-shadow: rgba(255, 156, 1, 0.5) 0px 0px 24px 4px inset, rgba(255, 156, 1, 0.3
 
 /* Create an active/current tablink class */
 .tab__container button.active {
-outline: none;
+	outline: none;
 	flex-grow: 1;
 	color: var(--text-color);
 	z-index: 10;
 
-border: 1px solid rgba(255, 49, 1, 0.45);
-box-shadow: rgba(255, 49, 1, 0.5) 0px 0px 24px 4px inset, rgba(255, 49, 1, 0.15) 0px -3px 3px 0px inset, rgba(255, 49, 1, 0.1) 0px 0px 12px 2px inset;
-  background: rgba(125, 176, 255, 0.15);
+	border: 1px solid rgba(255, 49, 1, 0.45);
+	box-shadow: rgba(255, 49, 1, 0.5) 0px 0px 24px 4px inset,
+		rgba(255, 49, 1, 0.15) 0px -3px 3px 0px inset,
+		rgba(255, 49, 1, 0.1) 0px 0px 12px 2px inset;
+	background: rgba(125, 176, 255, 0.15);
 }
 
 .tab__container button.active:hover {
 	transition: linear 0.15s;
-border: 1px solid rgba(255, 49, 1, 0.45);
- 
-          }
-
+	border: 1px solid rgba(255, 49, 1, 0.45);
+		background: rgba(125, 176, 255, 0.15);
+		cursor: default;
+}
 
 /* Style the tab content */
 .tabcontent {
@@ -136,10 +141,9 @@ border: 1px solid rgba(255, 49, 1, 0.45);
 }
 
 .p__link a {
-	font-family: "PP-med";
+	font-family: 'PP-med';
 	text-decoration: none;
 	color: rgba(0, 0, 0);
-	
 }
 
 .p__link a:hover {
@@ -155,7 +159,7 @@ h4 {
 
 /* landing page -- INTRO TEXT */
 span {
-	border-bottom: 1px solid var(--yellow-color);
+	border-bottom: 1px solid var(--divider-color);
 	display: inline-block;
 	width: 100%;
 	padding-bottom: 1rem;
@@ -165,14 +169,15 @@ span {
 	text-decoration: underline;
 }
 
-.p__filter:hover{
-font-family: var(--menu-font);
-/* text-transform: uppercase; */
+.p__filter:hover {
+	/* font-family: var(--menu-font); */
+	font-family: var(--filter-font);
+	/* text-transform: uppercase; */
 	text-decoration: none;
 	cursor: pointer;
 	padding: 0 4px;
 	transition: linear 0.15s;
-	line-height: .6;
+	line-height: 0.6;
 }
 
 /* landing page -- PROJECT SPOTLIGHT */
@@ -181,8 +186,8 @@ font-family: var(--menu-font);
 	display: grid;
 	grid-template-columns: repeat(2, 50%);
 	grid-column-gap: 12px;
-	padding:1rem 2rem;
-	border-bottom: 1px solid var(--yellow-color);
+	padding: 1rem 2rem;
+	border-bottom: 1px solid var(--divider-color);
 }
 
 .project--spotlight img {
@@ -197,50 +202,47 @@ font-family: var(--menu-font);
 .project--index {
 	display: flex;
 	justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
-		
+	flex-wrap: wrap;
+	align-items: flex-start;
 }
 
 .project--item {
 	width: 25%;
-    margin: 1rem 0 0 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    flex-direction: column;
-    justify-content: flex-end;
+	margin: 1rem 0 0 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	flex-direction: column;
+	justify-content: flex-end;
 }
 
 .project--item a {
-display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-left: -1px;
-  min-width: 0;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-left: -1px;
+	min-width: 0;
 	text-decoration: none;
-		border-right: 1px solid var(--yellow-color);
-		color: var(--text-color);
-		padding:1rem 2rem
+	border-right: 1px solid var(--divider-color);
+	color: var(--text-color);
+	padding: 1rem 2rem;
 }
 
 .project--item:nth-child(4n) a {
 	border-right: 1px solid white;
 }
 
-
 .project--item a img {
 	height: 200px;
 	width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .project--item .item__line {
-margin-top: 24px;
-  border-bottom: 1px solid var(--yellow-color);
-  width: 100%;
+	margin-top: 24px;
+	border-bottom: 1px solid var(--divider-color);
+	width: 100%;
 }
-

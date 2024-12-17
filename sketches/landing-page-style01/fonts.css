@@ -26,3 +26,9 @@
   src: url('Lack-Line-Regular.otf') format('opentype');
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Louise';
+  src: url('Louise-Regular.otf') format('opentype');
+  font-style: normal;
+}
