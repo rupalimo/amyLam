@@ -13,6 +13,7 @@
 	--primary-font: "PP-reg", serif;
 	--secondary-font: "Iowan Old Style", sans-serif;
 	--menu-font: "Call-reg", sans-serif;
+	--filter-font: "Lack Lane"
 	--text-color: #000;
 	--yellow-color: #ffea8b;
 	--purple-color: #957aff;
@@ -109,7 +110,7 @@ header {
 	display: none;
 	animation: var(--fade-in-effect);
 	margin: 1rem 2rem;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 /* LANDING PAGE (PROJECTS) LAYOUT */
@@ -161,13 +162,13 @@ span {
 }
 
 .p__filter:hover{
-font-family: "PP-med";
+font-family: var(--menu-font);
 /* text-transform: uppercase; */
 	text-decoration: none;
 	cursor: pointer;
 	padding: 0 4px;
-	transition: linear 0.075s;
-	
+	transition: linear 0.15s;
+	line-height: .6;
 }
 
 /* landing page -- PROJECT SPOTLIGHT */

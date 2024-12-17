@@ -20,3 +20,9 @@
   src: url('PPNeueMontreal-Italic.otf') format('opentype');
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Lack Lane';
+  src: url('Lack-Line-Regular.otf') format('opentype');
+  font-style: normal;
+}
