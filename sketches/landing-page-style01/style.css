@@ -67,9 +67,6 @@ header {
 
 /* Style the buttons that are used to open the tab content */
 .tab__container button {
-	background-color: rgba(255, 255, 255, 0);
-	float: left;
-	border: 1px solid hsla(0, 0%, 0%, 0.2);
 	color: rgba(0, 0, 0, 0.75);
 	outline: none;
 	cursor: pointer;
@@ -80,30 +77,37 @@ header {
 	font-family: var(--menu-font);
 	font-size: 1.25rem;
 	margin: 3px;
+border:1px solid rgba(255, 156, 1, 0.25);
+box-shadow: rgba(255, 156, 1, 0.5) 0px 0px 24px 4px inset, rgba(255, 156, 1, 0.33) 0px -3px 3px 0px inset, rgba(255, 156, 1, 0.1) 0px 0px 12px 2px inset;
+  background: rgb(255, 230, 243);
 }
 
 /* Change background color of buttons on hover */
 .tab__container button:hover {
-	border: 1px solid rgba(0, 0, 0, 0.75);
+	border:1px solid rgba(255, 156, 1, 0.75);
 	color: rgb(0, 0, 0);
+
+	background-position: right center;
 }
 
 /* Create an active/current tablink class */
 .tab__container button.active {
-	background: rgba(84, 212, 255, 0.1);
+outline: none;
 	flex-grow: 1;
-	border: 1px solid #3bd9ff;
-	color: rgb(0, 0, 0);
+	color: var(--text-color);
 	z-index: 10;
+
+border: 1px solid rgba(255, 49, 1, 0.45);
+box-shadow: rgba(255, 49, 1, 0.5) 0px 0px 24px 4px inset, rgba(255, 49, 1, 0.15) 0px -3px 3px 0px inset, rgba(255, 49, 1, 0.1) 0px 0px 12px 2px inset;
+  background: rgba(125, 176, 255, 0.15);
 }
 
 .tab__container button.active:hover {
-	transition: linear 0.075s;
-	border: 1px solid rgba(217, 217, 255, 0);
-	background: rgba(84, 212, 255, 0.25);
-	box-shadow: rgba(84, 212, 255, 0.25) 0px 3px 8px,
-		rgba(84, 212, 255, 0.25) 0px -3px 8px;
-}
+	transition: linear 0.15s;
+border: 1px solid rgba(255, 49, 1, 0.45);
+ 
+          }
+
 
 /* Style the tab content */
 .tabcontent {
