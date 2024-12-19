@@ -1,3 +1,5 @@
+@import 'fonts.css';
+
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -8,12 +10,14 @@
 }
 
 :root {
-	--primary-font: serif;
-	--secondary-font: sans-serif;
-	--menu-font: "Lack Line", sans-serif;
+	--primary-font:'Happy Times', serif;
+	--secondary-font: 'PP-light', sans-serif;
+	/* --secondary-font: 'Authentic', sans-serif; */
+	--menu-font: 'Calligraffitti', sans-serif;
 	--text-color: #000;
-	--yellow-color: #ffea8b;
-	--purple-color: #957aff;
+	--pink-color: #f694ff;
+	--blue-color: #0010ff;
+	--green-color: rgb(0, 255, 88);
 	--fade-in-effect: fadeIn 1s;
 	font-size: 16px;
 	font-family: var(--primary-font);
@@ -48,11 +52,15 @@ body {
 
 /* TOP-MENU */
 header {
-	/* position: sticky;
-	top: 0; */
+
 }
 
-/* Style the tab */
+/* GENERAL PAGE LAYOUT */
+main {
+	padding: 0 2rem;
+}
+
+/* TOP MENU BUTTONS */
 .tab__container {
 	overflow: hidden;
 	width: inherit;
@@ -62,12 +70,11 @@ header {
 	padding: 0.5rem;
 }
 
-/* Style the buttons that are used to open the tab content */
 .tab__container button {
-	background-color: rgba(255, 255, 255, 0);
 	float: left;
-	border: 1px solid hsla(0, 0%, 0%, 0.2);
-	color: rgba(0, 0, 0, 0.75);
+	border: 1px solid var(--pink-color);
+	color: var(--pink-color);
+	background-color: white;
 	outline: none;
 	cursor: pointer;
 	padding: 1rem;
@@ -79,62 +86,40 @@ header {
 	margin: 3px;
 }
 
-/* Change background color of buttons on hover */
 .tab__container button:hover {
-	border: 1px solid rgba(0, 0, 0, 0.75);
-	color: rgb(0, 0, 0);
+	border-radius: 100px;
+		transition: linear 0.125s;
 }
 
-/* Create an active/current tablink class */
+
 .tab__container button.active {
-	background: rgba(84, 212, 255, 0.1);
 	flex-grow: 1;
-	border: 1px solid #3bd9ff;
-	color: rgb(0, 0, 0);
+	border: 1px solid var(--green-color);
+	color: var(--green-color);
 	z-index: 10;
+	border-radius: 0px;
 }
 
 .tab__container button.active:hover {
-	transition: linear 0.075s;
-	border: 1px solid rgba(217, 217, 255, 0);
-	background: rgba(84, 212, 255, 0.25);
-	box-shadow: rgba(84, 212, 255, 0.25) 0px 3px 8px,
-		rgba(84, 212, 255, 0.25) 0px -3px 8px;
+	transition: linear 0.125s;
+	box-shadow: rgb(255, 255, 255) 0px 0px 12px 3px inset,rgb(0, 255, 88) 0px 0px 4px 1px inset ;
 }
 
-/* Style the tab content */
 .tabcontent {
 	display: none;
 	animation: var(--fade-in-effect);
-	margin: 1rem 2rem;
 	overflow-x: hidden;
 }
 
-/* LANDING PAGE (PROJECTS) LAYOUT */
-
-.p__nav,
 .p__detail,
-.p__link {
+.p__nav {
 	font-family: var(--secondary-font);
 }
 
-.p__nav {
-	font-size: 1.65rem;
-}
 
 .p__detail {
 	font-size: 1rem;
-	color: rgba(0, 0, 0, 0.75);
 	display: inline;
-}
-
-.p__link a {
-	text-decoration: none;
-	color: rgba(0, 0, 0);
-	text-transform: uppercase;
-}
-
-.p__link a:hover {
 }
 
 h4 {
@@ -146,21 +131,27 @@ h4 {
 
 /* landing page -- INTRO TEXT */
 span {
-	border-bottom: 1px solid var(--yellow-color);
+	border-bottom: 1px solid var(--pink-color);
 	display: inline-block;
 	width: 100%;
-	padding-bottom: 1rem;
+	padding: 2rem 2rem 2.5rem 2rem;
+}
+
+.p__nav {
+	font-size: 1.75rem;
+	line-height: 1.25;
+	display: inline;
 }
 
 .p__filter {
 	text-decoration: underline;
 	text-decoration-thickness: 2px;
-	text-underline-offset: 3px;
-	text-decoration-color: var(--purple-color);
+	text-underline-offset: 4px;
 }
 
-.p__filter:hover{
-font-family: ;
+.p__filter:hover {
+	font-family: 'PP';
+	transition: linear 0.075s;
 }
 
 /* landing page -- PROJECT SPOTLIGHT */
@@ -169,8 +160,8 @@ font-family: ;
 	display: grid;
 	grid-template-columns: repeat(2, 50%);
 	grid-column-gap: 12px;
-	padding:1rem 2rem;
-	border-bottom: 1px solid var(--yellow-color);
+	padding: 1rem 2rem;
+	border-bottom: 1px solid var(--pink-color);
 }
 
 .project--spotlight img {
@@ -185,50 +176,47 @@ font-family: ;
 .project--index {
 	display: flex;
 	justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
-		
+	flex-wrap: wrap;
+	align-items: flex-start;
 }
 
 .project--item {
 	width: 25%;
-    margin: 1rem 0 0 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    flex-direction: column;
-    justify-content: flex-end;
+	margin: 1rem 0 0 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	flex-direction: column;
+	justify-content: flex-end;
 }
 
 .project--item a {
-display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-left: -1px;
-  min-width: 0;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-left: -1px;
+	min-width: 0;
 	text-decoration: none;
-		border-right: 1px solid var(--yellow-color);
-		color: var(--text-color);
-		padding:1rem 2rem
+	border-right: 1px solid var(--pink-color);
+	color: var(--text-color);
+	padding: 1rem 2rem;
 }
 
 .project--item:nth-child(4n) a {
 	border-right: 1px solid white;
 }
 
-
 .project--item a img {
 	height: 200px;
 	width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .project--item .item__line {
-margin-top: 24px;
-  border-bottom: 1px solid var(--yellow-color);
-  width: 100%;
+	margin-top: 24px;
+	border-bottom: 1px solid var(--pink-color);
+	width: 100%;
 }
-
