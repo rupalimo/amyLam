@@ -1,14 +1,3 @@
-/* @font-face {
-  font-family: 'Ft88-italic';
-  src: url('fonts/FT88-Italic.otf') format('opentype');
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Ft88';
-  src: url('fonts/FT88-School.otf') format('opentype');
-  font-style: normal;
-} */
 
 @font-face {
   font-family: 'PP';
@@ -25,5 +14,11 @@
 @font-face {
   font-family: 'Calligraffitti';
   src: url('Calligraffitti-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('Barlow-Regular.ttf') format('truetype');
   font-style: normal;
 }
