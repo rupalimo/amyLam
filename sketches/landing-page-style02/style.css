@@ -147,11 +147,16 @@ span {
 	text-decoration: underline;
 	text-decoration-thickness: 2px;
 	text-underline-offset: 4px;
+	padding: 0 2px;
 }
 
 .p__filter:hover {
 	font-family: 'PP';
 	transition: linear 0.075s;
+	letter-spacing: default;
+	transform: translateX(-2px);
+		text-decoration: none;
+		cursor: pointer;
 }
 
 /* landing page -- PROJECT SPOTLIGHT */
