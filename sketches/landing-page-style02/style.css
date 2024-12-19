@@ -10,7 +10,7 @@
 }
 
 :root {
-	--primary-font:'Happy Times', serif;
+	--primary-font: 'Happy Times', serif;
 	--secondary-font: 'PP-light', sans-serif;
 	/* --secondary-font: 'Authentic', sans-serif; */
 	--menu-font: 'Calligraffitti', sans-serif;
@@ -52,7 +52,6 @@ body {
 
 /* TOP-MENU */
 header {
-
 }
 
 /* GENERAL PAGE LAYOUT */
@@ -88,9 +87,8 @@ main {
 
 .tab__container button:hover {
 	border-radius: 100px;
-		transition: linear 0.125s;
+	transition: linear 0.125s;
 }
-
 
 .tab__container button.active {
 	flex-grow: 1;
@@ -102,7 +100,8 @@ main {
 
 .tab__container button.active:hover {
 	transition: linear 0.125s;
-	box-shadow: rgb(255, 255, 255) 0px 0px 12px 3px inset,rgb(0, 255, 88) 0px 0px 4px 1px inset ;
+	box-shadow: rgb(255, 255, 255) 0px 0px 12px 3px inset,
+		rgb(0, 255, 88) 0px 0px 4px 1px inset;
 }
 
 .tabcontent {
@@ -115,7 +114,6 @@ main {
 .p__nav {
 	font-family: var(--secondary-font);
 }
-
 
 .p__detail {
 	font-size: 1rem;
@@ -147,16 +145,14 @@ span {
 	text-decoration: underline;
 	text-decoration-thickness: 2px;
 	text-underline-offset: 4px;
-	padding: 0 2px;
 }
 
 .p__filter:hover {
 	font-family: 'PP';
-	transition: linear 0.075s;
-	letter-spacing: default;
-	transform: translateX(-2px);
-		text-decoration: none;
-		cursor: pointer;
+	transition: linear 0.125s;
+	text-decoration: none;
+	cursor: pointer;
+	letter-spacing: 1.75px;
 }
 
 /* landing page -- PROJECT SPOTLIGHT */
