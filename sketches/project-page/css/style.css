@@ -1,0 +1,233 @@
+@import 'fonts.css';
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+:root {
+	--primary-font: 'Happy Times', serif;
+	--secondary-font: 'PP', sans-serif;
+	--menu-font: 'Arial', sans-serif;
+	--filter-font: 'Fahk', sans-serif;
+	--text-color: #2e2706;
+	--yellow-color: rgb(221, 255, 119);
+	--orange-color: #ffd2a9fb;
+	--blue-color: #c29aff;
+	--fade-in-effect: fadeIn 1s;
+	font-size: 16px;
+	font-family: var(--primary-font);
+	color: var(--text-color);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+::selection {
+	background-color: var(--highlight);
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+}
+
+main {
+	padding: 0 2rem;
+}
+
+/* Style the tab */
+.tab__container {
+	overflow: hidden;
+	width: inherit;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	padding: 0.5rem;
+}
+
+.tab__container button {
+	background-color: rgba(255, 255, 255, 0);
+	border: 1px solid var(--blue-color);
+	color: var(--blue-color);
+	outline: none;
+	cursor: pointer;
+	padding: 1rem;
+	transition: 0.3s;
+	min-width: 20%;
+	font-family: var(--menu-font);
+	letter-spacing: -0.85px;
+	font-size: 1rem;
+	margin: 3px;
+	text-transform: uppercase;
+	box-shadow: var(--blue-color) 0px 0px 1px 2px inset;
+}
+
+/* Change background color of buttons on hover */
+.tab__container button:hover {
+	border: 1px solid var(--blue-color);
+	color: var(--blue-color);
+	box-shadow: var(--blue-color) 0px 0px 1px 1px inset;
+	transition: linear 0.125s;
+}
+
+/* Create an active/current tablink class */
+.tab__container button.active {
+	flex-grow: 1;
+	color: var(--text-color);
+	z-index: 10;
+	border-radius: 100%;
+	box-shadow: var(--text-color) 0px 0px 1px 6px inset;
+	border: 1px solid var(--text-color);
+}
+
+.tab__container button.active:hover {
+	transition: linear 0.125s;
+	border: 1px solid var(--text-color);
+	box-shadow: var(--text-color) 0px 0px 1px 3px inset;
+}
+
+/* Style the tab content */
+.tabcontent {
+	display: none;
+	animation: var(--fade-in-effect);
+	overflow-x: hidden;
+}
+
+/* LANDING PAGE (PROJECTS) LAYOUT */
+span {
+	border-bottom: 1px solid var(--yellow-color);
+	display: inline-block;
+	width: 100%;
+	padding: 2rem 2rem 2.5rem 2rem;
+}
+
+.p__filter {
+	text-decoration: underline;
+}
+
+.p__filter:hover {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.p__nav,
+.p__detail {
+	font-family: var(--filter-font);
+}
+
+.p__nav {
+	font-size: 1.65rem;
+	display: inline;
+	line-height: 1.25;
+}
+
+.p__detail {
+	font-size: 1rem;
+	color: rgba(0, 0, 0, 0.75);
+	display: inline;
+}
+
+.p__link a {
+	color: rgba(0, 0, 0);
+	text-decoration: underline;
+}
+
+.p__link a:hover {
+}
+
+p {
+	font-family: var(--secondary-font);
+}
+
+h4 {
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 1.125rem;
+	margin: 1rem 0;
+}
+
+/* landing page -- PROJECT SPOTLIGHT */
+
+.project--spotlight {
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+	grid-column-gap: 12px;
+	padding: 1rem 2rem;
+	border-bottom: 1px solid var(--yellow-color);
+}
+
+.project--spotlight img {
+	width: 100%;
+	min-height: 400px;
+	background: rgb(233, 233, 233);
+	height: 100%;
+}
+
+/* landing page -- PROJECT INDEX */
+
+.project--index {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+.project--item {
+	width: 25%;
+	margin: 1rem 0 0 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.project--item a {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-left: -1px;
+	min-width: 0;
+	text-decoration: none;
+	border-right: 1px solid var(--yellow-color);
+	color: var(--text-color);
+	padding: 1rem 2rem;
+}
+
+.project--item:nth-child(4n) a {
+	border-right: 1px solid white;
+}
+
+.project--item a img {
+	height: 200px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.project--item .item__line {
+	margin-top: 24px;
+	border-bottom: 1px solid var(--yellow-color);
+	width: 100%;
+}

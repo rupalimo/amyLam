@@ -39,3 +39,12 @@ a:hover {
 	color: blue;
 	text-decoration: underline;
 }
+
+.inprogress {
+	color: grey;
+}
+
+.out {
+	text-decoration: line-through;
+	color: black;
+}
