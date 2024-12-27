@@ -54,7 +54,7 @@ main {
 	padding: 0 2rem;
 }
 
-/* Style the tab */
+/* TOP MENU STYLING */
 .tab__container {
 	overflow: hidden;
 	width: inherit;
@@ -81,7 +81,7 @@ main {
 	box-shadow: var(--blue-color) 0px 0px 1px 2px inset;
 }
 
-/* Change background color of buttons on hover */
+
 .tab__container button:hover {
 	border: 1px solid var(--blue-color);
 	color: var(--blue-color);
@@ -89,7 +89,7 @@ main {
 	transition: linear 0.125s;
 }
 
-/* Create an active/current tablink class */
+
 .tab__container button.active {
 	flex-grow: 1;
 	color: var(--text-color);
@@ -105,14 +105,13 @@ main {
 	box-shadow: var(--text-color) 0px 0px 1px 3px inset;
 }
 
-/* Style the tab content */
 .tabcontent {
 	display: none;
 	animation: var(--fade-in-effect);
 	overflow-x: hidden;
 }
 
-/* LANDING PAGE (PROJECTS) LAYOUT */
+/* DEFAULT LANDING PAGE / "PROJECTS" LAYOUT */
 span {
 	border-bottom: 1px solid var(--yellow-color);
 	display: inline-block;
@@ -231,3 +230,6 @@ h4 {
 	border-bottom: 1px solid var(--yellow-color);
 	width: 100%;
 }
+
+
+/* project -- PROJECT INDEX */

@@ -1,4 +1,4 @@
-@import '../css/fonts.css';
+@import 'fonts.css';
 
 @keyframes fadeIn {
 	from {
@@ -54,6 +54,8 @@ main {
 	padding: 0 2rem;
 }
 
+/* TOP MENU / "BACK TO PROJECTS PAGE" */
+
 .tab__container {
 	overflow: hidden;
 	width: inherit;
@@ -63,47 +65,31 @@ main {
 	padding: 0.5rem;
 }
 
-.tab__container button {
+.tab__container .button--back {
 	padding: 1rem;
 	margin: 3px;
-	min-width: 20%;
+	width: 100%;
 	font-family: var(--menu-font);
 	letter-spacing: -0.85px;
 	font-size: 1rem;
 	text-transform: uppercase;
 	background-color: rgba(255, 255, 255, 0);
-	border: 1px solid rgb(255, 255, 255);
+	border-bottom: 1px solid rgb(255, 255, 255);
 	color: var(--blue-color);
 	outline: none;
 	cursor: pointer;
 	transition: 0.3s;
-}
-
-.tab__container .tabitems {
-display: none;
-}
-
-/* Create an active/current tablink class */
-.tab__container button.open {
-	flex-grow: 1;
-	color: var(--text-color);
+	text-align: center;
+	text-decoration: none;
 	z-index: 10;
-	border-radius: 100%;
-	/* border: 1px solid var(--text-color); */
+	border-bottom: 1px solid var(--blue-color);
 }
 
-.tab__container button.open:hover {
+.tab__container .button--back:hover {
 	transition: linear 0.125s;
-	border: 1px solid var(--text-color);
-
 }
 
-/* Style the tab content */
-.tabcontent {
-	display: none;
-	animation: var(--fade-in-effect);
-}
-
+/* MAIN PROJECT PAGE SECTION */
 .project__container {
 	display: grid;
 	grid-template-columns: 26% 1fr 26%;
