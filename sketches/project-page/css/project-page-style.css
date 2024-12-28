@@ -11,13 +11,16 @@
 
 :root {
 	--primary-font: 'Happy Times', serif;
+	--project-title-font: 'Avara', 'Happy Times', serif;
 	--secondary-font: 'PP', sans-serif;
 	--menu-font: 'Arial', sans-serif;
 	--filter-font: 'Fahk', sans-serif;
-	--text-color: #2e2706;
+	--text-color: #100223;
+	--highlight-color: #0022ff;
 	--yellow-color: rgb(221, 255, 119);
 	--orange-color: #ffd2a9fb;
 	--blue-color: #c29aff;
+	--grey-color: #c8c8c8;
 	--fade-in-effect: fadeIn 1s;
 	font-size: 16px;
 	font-family: var(--primary-font);
@@ -54,6 +57,11 @@ main {
 	padding: 0 2rem;
 }
 
+a {
+	color: var(--text-color);
+	text-decoration: none;
+}
+
 /* TOP MENU / "BACK TO PROJECTS PAGE" */
 
 .tab__container {
@@ -73,39 +81,41 @@ main {
 	letter-spacing: -0.85px;
 	font-size: 1rem;
 	text-transform: uppercase;
-	background-color: rgba(255, 255, 255, 0);
-	border-bottom: 1px solid rgb(255, 255, 255);
-	color: var(--blue-color);
+	color: var(--grey-color);
 	outline: none;
 	cursor: pointer;
-	transition: 0.3s;
-	text-align: center;
+	text-align: right;
 	text-decoration: none;
 	z-index: 10;
-	border-bottom: 1px solid var(--blue-color);
+
+	/* border-bottom: 1px solid var(--grey-color); */
 }
 
 .tab__container .button--back:hover {
-	transition: linear 0.125s;
+	transition: ease-in-out 0.75s;
+	color: var(--blue-color);
+	/* border-bottom: 1px solid var(--blue-color); */
 }
 
 /* MAIN PROJECT PAGE SECTION */
 .project__container {
 	display: grid;
-	grid-template-columns: 26% 1fr 26%;
-	justify-items: right;
+	grid-template-columns: 1fr 42rem 1fr;
+	position: relative;
 }
 
-.project__details {
-	font-family: var(--secondary-font);
+.project__sticky {
+	font-family: var(--filter-font);
 	width: 50%;
-	position: sticky;
-	margin: 4rem;
+	position: -webkit-sticky;
+  position: sticky;
+  top: 13rem;
+	margin: 0 auto;
 	border: 1px solid var(--text-color);
-	box-shadow: rgba(0, 0, 0, 0.35) 4px 4px 8px;
+	box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 8px;
 }
 
-.project__details ul {
+.project__sticky ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -113,27 +123,100 @@ main {
 	grid-template-columns: 50% 50%;
 }
 
-.project__details li {
-	margin: 0;
-	font-size: 0.8rem;
+.project__sticky li:not(:last-child) {
 	border-bottom: 1px solid var(--text-color);
+}
+
+.project__sticky .project--link,
+.project__sticky .project--category,
+.project__sticky .project--details {
+	font-size: 0.75rem;
 	padding: 1rem;
+	margin: 0;
+}
+
+.project__sticky .project--link, .project__sticky .project--details {
+grid-column: 1/3;
+}
+
+.project__sticky .project--category:nth-child(odd) {
 	border-right: 1px solid var(--text-color);
 }
 
-.project__details a {
+.project__sticky .project--details {
 	color: var(--text-color);
 }
 
-.project--text {
-	grid-column: 1/3;
+.project__sticky a, .book-launch a {
+	color: var(--highlight-color);
+	font-weight: bold;
 }
 
-.project--content {
+.project__scroll {
 	grid-column: 2;
 	grid-row: 1 /3;
 }
 
-.project--content h1 {
+.project__scroll h1 {
 	text-align: center;
+	font-family: var(--primary-font);
+	font-weight: normal;
+	font-size: 2.5rem;
+	font-family: var(--project-title-font);
+}
+
+.quote__container {
+	display: grid;
+	grid-template-columns: 25% 1fr;
+	padding: 2rem 0;
+}
+
+.project__scroll .quote__container .quote__line {
+	height: auto;
+	width: 0.5rem;
+	background: var(--highlight-color);
+	margin-left: 95%;
+	box-shadow: var(--highlight-color) 1px 1px 3px 3px;
+}
+
+.project__scroll .quote__container p {
+	color: var(--highlight-color);
+	font-size: 1.15rem;
+	font-style: italic;
+	margin: 0rem;
+	text-align: left;
+	line-height: 1.15;
+	/* border-left: 0.5rem solid var(--highlight-color); */
+	padding-left: 5%;
+}
+
+
+.project__scroll p {
+	font-family: var(--secondary-font);
+	text-align: justify;
+}
+
+.project__scroll img {
+	width: 100%;
+	height: auto;
+}
+
+.book-launch {
+	border: 1px solid var(--highlight-color);
+	font-family: var(--secondary-font);
+}
+
+.book-launch p {
+	padding-left: 1rem;
+}
+
+.book-launch ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.book-launch li {
+	padding: 1rem;
+	border-top: 1px dashed var(--highlight-color);
 }

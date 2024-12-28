@@ -5,6 +5,12 @@
 }
 
 @font-face {
+  font-family: 'Avara';
+  src: url('../fonts/Avara-Bold.otf') format('opentype');
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'PP';
   src: url('../fonts/PPNeueMontreal-Book.otf') format('opentype');
   font-style: normal;
