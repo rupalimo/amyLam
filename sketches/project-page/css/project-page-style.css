@@ -11,10 +11,11 @@
 
 :root {
 	--primary-font: 'Happy Times', serif;
-	--project-title-font: 'Avara', 'Happy Times', serif;
+	--project-title-font: 'Iowan Old Style', serif;
 	--secondary-font: 'PP', sans-serif;
 	--menu-font: 'Arial', sans-serif;
 	--filter-font: 'Fahk', sans-serif;
+	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
 	--text-color: #100223;
 	--highlight-color: #0022ff;
 	--yellow-color: rgb(221, 255, 119);
@@ -64,7 +65,7 @@ a {
 
 /* TOP MENU / "BACK TO PROJECTS PAGE" */
 
-.tab__container {
+.tab__container, .footer__container  {
 	overflow: hidden;
 	width: inherit;
 	display: flex;
@@ -73,7 +74,8 @@ a {
 	padding: 0.5rem;
 }
 
-.tab__container .button--back {
+.tab__container .button--back,
+.footer__container a {
 	padding: 1rem;
 	margin: 3px;
 	width: 100%;
@@ -84,17 +86,23 @@ a {
 	color: var(--grey-color);
 	outline: none;
 	cursor: pointer;
-	text-align: right;
+	text-align: center;
 	text-decoration: none;
 	z-index: 10;
-
-	/* border-bottom: 1px solid var(--grey-color); */
+border-radius: 100%;
+	border: 1px solid rgba(0, 0, 0, 0);
 }
 
-.tab__container .button--back:hover {
-	transition: ease-in-out 0.75s;
-	color: var(--blue-color);
-	/* border-bottom: 1px solid var(--blue-color); */
+.tab__container .button--back:hover,
+.footer__container a:hover {
+	transition: linear 0.25s;
+	color: var(--text-color);
+	border: 1px solid var(--text-color);
+}
+
+.tab__container .button--back:focus,
+.footer__container a:focus {
+	box-shadow: var(--text-color) 0px 0px 1px 2px inset;
 }
 
 /* MAIN PROJECT PAGE SECTION */
@@ -108,8 +116,8 @@ a {
 	font-family: var(--filter-font);
 	width: 50%;
 	position: -webkit-sticky;
-  position: sticky;
-  top: 13rem;
+	position: sticky;
+	top: 13rem;
 	margin: 0 auto;
 	border: 1px solid var(--text-color);
 	box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 8px;
@@ -127,16 +135,22 @@ a {
 	border-bottom: 1px solid var(--text-color);
 }
 
+.project__sticky li p {
+	margin: 0.5rem 0 0 0;
+}
+
 .project__sticky .project--link,
 .project__sticky .project--category,
 .project__sticky .project--details {
-	font-size: 0.75rem;
+	font-size: var(--font-size-sm);
+	/* font-size: 0.75rem; */
 	padding: 1rem;
 	margin: 0;
 }
 
-.project__sticky .project--link, .project__sticky .project--details {
-grid-column: 1/3;
+.project__sticky .project--link,
+.project__sticky .project--details {
+	grid-column: 1/3;
 }
 
 .project__sticky .project--category:nth-child(odd) {
@@ -147,7 +161,8 @@ grid-column: 1/3;
 	color: var(--text-color);
 }
 
-.project__sticky a, .book-launch a {
+.project__sticky a,
+.book-launch a {
 	color: var(--highlight-color);
 	font-weight: bold;
 }
@@ -190,7 +205,6 @@ grid-column: 1/3;
 	padding-left: 5%;
 }
 
-
 .project__scroll p {
 	font-family: var(--secondary-font);
 	text-align: justify;
@@ -206,8 +220,9 @@ grid-column: 1/3;
 	font-family: var(--secondary-font);
 }
 
-.book-launch p {
+.book-launch h4 {
 	padding-left: 1rem;
+	text-transform: uppercase;
 }
 
 .book-launch ul {
@@ -219,4 +234,26 @@ grid-column: 1/3;
 .book-launch li {
 	padding: 1rem;
 	border-top: 1px dashed var(--highlight-color);
+}
+
+.footer__container a {
+display: block;
+margin-top: 10vh;
+}
+
+@media screen and (max-width: 1460px) {
+	:root {
+	}
+
+	.project__sticky {
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 1260px) {
+	:root {
+	}
+
+	.project__sticky {
+	}
 }
