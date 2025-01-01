@@ -85,13 +85,13 @@ a {
 	font-size: 1rem;
 	margin: 3px;
 	text-transform: uppercase;
-	box-shadow: var(--blue-color) 0px 0px 1px 2px inset;
+	box-shadow: var(--blue-color) 0px 0px 1px 0px inset;
 }
 
 .tab__container button:hover {
 	border: 1px solid var(--blue-color);
 	color: var(--blue-color);
-	box-shadow: var(--blue-color) 0px 0px 1px 1px inset;
+	box-shadow: var(--blue-color) 0px 0px 1px 2px inset;
 	transition: linear 0.125s;
 }
 
@@ -100,14 +100,8 @@ a {
 	color: var(--text-color);
 	z-index: 10;
 	border-radius: 100%;
-	box-shadow: var(--text-color) 0px 0px 1px 6px inset;
+	box-shadow: var(--text-color) 0px 0px 1px 8px inset;
 	border: 1px solid var(--text-color);
-}
-
-.tab__container button.active:hover {
-	transition: linear 0.125s;
-	border: 1px solid var(--text-color);
-	box-shadow: var(--text-color) 0px 0px 1px 3px inset;
 }
 
 .tabcontent {
@@ -117,33 +111,39 @@ a {
 }
 
 /* landing page -- INTRO TEXT W FILTER */
-.para__nav {
+.para__project {
 	border-bottom: 1px solid var(--yellow-color);
-	display: inline-block;
 	width: 100%;
+		display: inline-block;
+}
+
+.para__project, .para__news, .para__press, .para__about {
+	display: inline-block;
 	padding: 1rem 2rem 1.5rem 2rem;
 	font-size: 1.65rem;
 	line-height: 1.25;
 	font-family: var(--filter-font);
 }
 
-.para--filter {
+.para--filter, .para__about a {
 	text-decoration: underline;
 }
 
-.para--filter:hover {
+.para--filter:hover, .para__about a:hover {
 	cursor: pointer;
 	text-decoration: none;
 }
 
 /* landing page -- PROJECT SPOTLIGHT */
-
 .project__spotlight {
+	border-bottom: 1px solid var(--yellow-color);
+		grid-template-columns: repeat(2, 50%);
+}
+
+.project__spotlight, .para__about {
 	display: grid;
-	grid-template-columns: repeat(2, 50%);
 	grid-column-gap: 12px;
 	padding: 1rem 2rem;
-	border-bottom: 1px solid var(--yellow-color);
 }
 
 .project__spotlight img {
@@ -213,10 +213,49 @@ a {
 	align-items: center;
 }
 
-.project--item .item__line {
+.item__line {
 	margin-top: 24px;
 	border-bottom: 1px solid var(--yellow-color);
 	width: 100%;
 }
 
-/* project -- PROJECT INDEX */
+/* about section -- AMY CHING-YAN LAM */
+
+.para__about, .para__news, .para__press {
+	grid-template-columns: 40% 60%;
+}
+
+.para__about p:last-child {
+		padding: 1rem 0;
+	font-family: var(--menu-font);
+	letter-spacing: -0.85px;
+	font-size: 1rem;
+grid-column: 2;
+	text-transform: uppercase;
+	font-style: italic;
+}
+
+.para__about img {
+width: 100%;
+padding: 2rem
+}
+
+/* news section */
+
+/* .para__news ul li {
+ grid-template-columns: 25% 1fr;
+} */
+
+.para__news ul {
+list-style: none;
+padding: 0;
+}
+
+.para__news .news--date {
+	font-family: var(--menu-font);
+		letter-spacing: -0.85px;
+	font-size: 1rem;
+	margin: 3px;
+	text-transform: uppercase;
+
+}
