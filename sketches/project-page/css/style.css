@@ -15,8 +15,6 @@
 	--menu-font: 'Arial', sans-serif;
 	--filter-font: 'Fahk', sans-serif;
 	--text-color: #100223;
-	--highlight-color: #0022ff;
-	--green-color: #0a6015;
 	--yellow-color: rgb(221, 255, 119);
 	/* --blue-color: #c29aff; */
 	--blue-color: #5d00ff;
@@ -58,8 +56,13 @@ main {
 }
 
 a {
+	color: var(--blue-color);
 	text-decoration: none;
-	color: var(--text-color);
+	cursor: pointer
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 /* TOP MENU STYLING */
@@ -74,8 +77,8 @@ a {
 
 .tab__container button {
 	background-color: rgba(255, 255, 255, 0);
-	border: 1px solid var(--blue-color);
-	color: var(--blue-color);
+	border: 1px solid var(--text-color);
+	color: var(--text-color);
 	outline: none;
 	cursor: pointer;
 	padding: 1rem;
@@ -86,13 +89,13 @@ a {
 	font-size: 1rem;
 	margin: 3px;
 	text-transform: uppercase;
-	box-shadow: var(--blue-color) 0px 0px 1px 0px inset;
+	box-shadow: var(--text-color) 0px 0px 1px 0px inset;
 }
 
 .tab__container button:hover {
-	border: 1px solid var(--blue-color);
-	color: var(--blue-color);
-	box-shadow: var(--blue-color) 0px 0px 1px 2px inset;
+	border: 1px solid var(--text-color);
+	color: var(--text-color);
+	box-shadow: var(--text-color) 0px 0px 1px 1px inset;
 	transition: linear 0.125s;
 }
 
@@ -126,13 +129,8 @@ a {
 	font-family: var(--filter-font);
 }
 
-.para--filter, .para__about a {
+.para--filter {
 	text-decoration: underline;
-}
-
-.para--filter:hover, .para__about a:hover {
-	cursor: pointer;
-	text-decoration: none;
 }
 
 /* landing page -- PROJECT SPOTLIGHT */
@@ -196,7 +194,6 @@ a {
 	align-items: center;
 	margin-left: -1px;
 	min-width: 0;
-	text-decoration: none;
 	border-right: 1px solid var(--yellow-color);
 	color: var(--text-color);
 	padding: 1rem 2rem;
@@ -278,16 +275,6 @@ padding-bottom: 1.5rem;
 	text-transform: uppercase;
 }
 
-.para__news a {
-	text-decoration:underline;
-	cursor: pointer;
-}
-
-.para__news a:hover {
-		text-decoration: none;
-}
-
-
 /* press section */
 
 
@@ -302,6 +289,7 @@ padding-bottom: 1.5rem;
 list-style: none;
 padding: 0;
 padding-bottom: 1.5rem;
+border-bottom: 1px solid var(--yellow-color);
 }
 
 .para__press ul span p {
@@ -309,7 +297,6 @@ padding-bottom: 1.5rem;
 }
 
 .para__press ul span a {
-	color: var(--blue-color);
 	margin: 0 0.5rem;
 }
 
@@ -325,11 +312,4 @@ margin: 0.5rem 0;
 
 } */
 
-.para__press li a {
- text-decoration: underline;
-}
-
-.para__press li a:hover {
- text-decoration: none;
-}
 
