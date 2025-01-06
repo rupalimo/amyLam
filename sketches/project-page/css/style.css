@@ -15,10 +15,11 @@
 	--menu-font: 'Arial', sans-serif;
 	--filter-font: 'Fahk', sans-serif;
 	--text-color: #100223;
-	--brown-color: #483a05;
+	--highlight-color: #0022ff;
+	--green-color: #0a6015;
 	--yellow-color: rgb(221, 255, 119);
-	--orange-color: #ffd2a9fb;
-	--blue-color: #c29aff;
+	/* --blue-color: #c29aff; */
+	--blue-color: #5d00ff;
 	--grey-color: #c8c8c8;
 	--fade-in-effect: fadeIn 1s;
 	font-size: 16px;
@@ -38,7 +39,7 @@
 }
 
 ::selection {
-	background-color: var(--highlight);
+	background-color: var(--yellow-color);
 }
 
 html,
@@ -79,7 +80,7 @@ a {
 	cursor: pointer;
 	padding: 1rem;
 	transition: 0.3s;
-	min-width: 20%;
+	min-width: 15%;
 	font-family: var(--menu-font);
 	letter-spacing: -0.85px;
 	font-size: 1rem;
@@ -140,7 +141,7 @@ a {
 		grid-template-columns: repeat(2, 50%);
 }
 
-.project__spotlight, .para__about {
+.project__spotlight {
 	display: grid;
 	grid-column-gap: 12px;
 	padding: 1rem 2rem;
@@ -221,46 +222,114 @@ a {
 
 /* about section -- AMY CHING-YAN LAM */
 
-.para__about, .para__news, .para__press {
-	grid-template-columns: 40% 60%;
+.para__about {
+	grid-template-rows: 52vh 1fr;
+	justify-items: center;
+		display: grid;
+}
+
+.para__about img {
+height: 100%;
+width: auto;
+padding: 2rem 0
+}
+
+.para__about p {
+	text-align: center;
 }
 
 .para__about p:last-child {
-		padding: 1rem 0;
+		padding: 2rem 0 1rem 0;
 	font-family: var(--menu-font);
 	letter-spacing: -0.85px;
 	font-size: 1rem;
 grid-column: 2;
 	text-transform: uppercase;
-	font-style: italic;
-}
-
-.para__about img {
-width: 100%;
-padding: 2rem
+color: var(--grey-color);
 }
 
 /* news section */
-
-/* .para__news ul li {
- grid-template-columns: 25% 1fr;
-} */
 
 .para__news ul {
 list-style: none;
 padding: 0;
 border-bottom: 1px solid var(--yellow-color);
+padding-bottom: 1.5rem;
+}
+.para__news p + li {
+	margin-bottom: 0.5rem;
+}
+.para__news li + li, .para__news li + li a  {
+	margin: 0;
+	font-family: var(--menu-font);
+	font-size: 1.25rem;
+	
 }
 
-.para__news li {
-	margin-bottom: 1rem;
+.para__news li, .para__news p {
+	text-align: center;
 }
 
-.para__news .news--date {
+.para__news p, .para__press span  {
 	font-family: var(--menu-font);
 		letter-spacing: -0.85px;
 	font-size: 1rem;
 	margin: 3px;
 	text-transform: uppercase;
+}
+
+.para__news a {
+	text-decoration:underline;
+	cursor: pointer;
+}
+
+.para__news a:hover {
+		text-decoration: none;
+}
+
+
+/* press section */
+
+
+.para__press span {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	justify-content: center;
+}
+
+.para__press ul {
+list-style: none;
+padding: 0;
+padding-bottom: 1.5rem;
+}
+
+.para__press ul span p {
+	margin: 0 0.5rem;
+}
+
+.para__press ul span a {
+	color: var(--blue-color);
+	margin: 0 0.5rem;
+}
+
+
+.para__press li {
+text-align: center;
+margin: 0.5rem 0;
 
 }
+/* 
+.para__press li::before {
+	content: "‣ "; 
+
+} */
+
+.para__press li a {
+ text-decoration: underline;
+}
+
+.para__press li a:hover {
+ text-decoration: none;
+}
+

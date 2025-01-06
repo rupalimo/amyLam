@@ -17,10 +17,9 @@
 	--filter-font: 'Fahk', sans-serif;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
 	--text-color: #100223;
-	--highlight-color: #0022ff;
+	--highlight-color: #5c490c;
 	--yellow-color: rgb(221, 255, 119);
-	--orange-color: #ffd2a9fb;
-	--blue-color: #c29aff;
+--blue-color: #5d00ff;
 	--grey-color: #c8c8c8;
 	--fade-in-effect: fadeIn 1s;
 	font-size: 16px;
@@ -83,7 +82,7 @@ a {
 	letter-spacing: -0.85px;
 	font-size: 1rem;
 	text-transform: uppercase;
-	color: var(--grey-color);
+	color: var(--blue-color);
 	outline: none;
 	cursor: pointer;
 	text-align: center;
@@ -158,7 +157,7 @@ border-radius: 100%;
 
 .project__sticky a,
 .book-launch a {
-	color: var(--highlight-color);
+	color: var(--blue-color);
 	font-weight: bold;
 }
 
