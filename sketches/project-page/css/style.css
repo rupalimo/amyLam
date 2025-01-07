@@ -124,25 +124,39 @@ a:hover {
 .para__project, .para__news, .para__press, .para__about {
 	display: inline-block;
 	padding: 1rem 2rem 1.5rem 2rem;
-	font-size: 1.65rem;
+	font-size: 1.75rem;
 	line-height: 1.25;
 	font-family: var(--filter-font);
 }
 
-.para--filter {
-	text-decoration: underline;
+.filter {
+	/* text-decoration: underline; */
+	font-size: 1.75rem;
+	line-height: 1.25;
+	font-family: var(--filter-font);
+	color:var(--grey-color);
+}
+
+.filter:hover {
+	color:var(--blue-color);
+}
+
+.on {
+	color:var(--blue-color);
 }
 
 /* landing page -- PROJECT SPOTLIGHT */
 .project__spotlight {
 	border-bottom: 1px solid var(--yellow-color);
 		grid-template-columns: repeat(2, 50%);
-}
-
-.project__spotlight {
-	display: grid;
+		color: var(--text-color);
+			display: grid;
 	grid-column-gap: 12px;
 	padding: 1rem 2rem;
+}
+
+.project__spotlight:hover {
+	text-decoration: none;
 }
 
 .project__spotlight img {
@@ -298,6 +312,8 @@ border-bottom: 1px solid var(--yellow-color);
 
 .para__press ul span a {
 	margin: 0 0.5rem;
+	color:var(--text-color);
+	text-decoration: underline;
 }
 
 
