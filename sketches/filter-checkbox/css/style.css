@@ -95,7 +95,7 @@ a:hover {
 .tab__container button:hover {
 	border: 1px solid var(--text-color);
 	color: var(--text-color);
-	box-shadow: var(--text-color) 0px 0px 1px 1px inset;
+	box-shadow: var(--text-color) 0px 0px 4px 1px inset;
 	transition: linear 0.125s;
 }
 
@@ -104,7 +104,7 @@ a:hover {
 	color: var(--text-color);
 	z-index: 10;
 	border-radius: 100%;
-	box-shadow: var(--text-color) 0px 0px 1px 8px inset;
+	box-shadow: var(--text-color) 0px 0px 4px 8px inset;
 	border: 1px solid var(--text-color);
 }
 
@@ -129,50 +129,126 @@ a:hover {
 	font-family: var(--filter-font);
 }
 
-input {
+
+
+label {
 	/* text-decoration: underline; */
 	font-size: 1.75rem;
 	line-height: 1.25;
 	font-family: var(--filter-font);
-	color:var(--grey-color);
+	color:var(--blue-color);
 }
 
 input:hover {
-	color:var(--blue-color);
+	/* color:var(--blue-color); */
+	cursor: pointer;
 }
+input {
+    /* position: relative; */
+  }
 
-.on {
-	color:var(--blue-color);
-}
+  input *,
+  input *::after,
+  input *::before {
+    box-sizing: border-box;
+  }
+
+input[type="checkbox"] {
+    /* display: inline-block;
+    vertical-align: middle; */
+    opacity: 0;
+		vertical-align: middle; 
+		z-index: 100;
+		position: relative;
+  }
+
+input[type="checkbox"], label::before {
+    /* width:20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); */
+  }
+
+label {
+    display: inline-block;
+    position: relative;
+    padding: 0 0 0 calc(var(20px) + 7px);
+  }
+
+  label::before {
+  content: '';
+  border: 2px solid vaR(--blue-color);
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  position: inherit;
+  width: 15px;
+  display: block;
+  height: 15px;
+	transform: translate(-110%, 150%);
+  }
+
+input[type="checkbox"]:checked + label::before {
+    opacity: 1;
+  }
+
+input svg {
+    position: absolute;
+    top: calc(50% + 2px);
+    left: var(--border-size);
+    width: calc(20px - (2px * 2));
+    height: calc(20px - (2px * 2));
+    margin-top: calc(20px / -2);
+    pointer-events: none;
+  }
+
+  input svg path {
+    stroke-width: 0;
+    fill: none;
+  }
+
+ input svg path + path {
+
+  }
+
+input[type="checkbox"]:checked ~ svg path {
+    stroke-dashoffset: 0;
+    stroke-width: calc(20px / 2);
+  }
 
 /* landing page -- PROJECT SPOTLIGHT */
-.project__spotlight {
-	border-bottom: 1px solid var(--yellow-color);
-		grid-template-columns: repeat(2, 50%);
-		color: var(--text-color);
-			display: grid;
+.project--spotlight {
+grid-column: 1/5;
 	grid-column-gap: 12px;
 	padding: 1rem 2rem;
+	border-bottom: 1px solid var(--yellow-color);
 }
 
-.project__spotlight:hover {
+.project--spotlight:hover {
 	text-decoration: none;
 }
 
-.project__spotlight img {
-	width: 100%;
+.project--spotlight a {
+	color: var(--text-color);
+}
+
+.project--spotlight img {
+	width: 50%;
+	float: left;
 	min-height: 400px;
 	background: rgb(233, 233, 233);
 	height: 100%;
 }
 
-.project--category {
-	font-family: var(--filter-font);
+.project--spotlight div {
+	width: 50%;
+	float: right;
+	padding: 0 2rem;
 }
 
-.p__detail {
-	font-size: 1rem;
-	color: rgba(0, 0, 0, 0.75);
+.project--category {
+	font-family: var(--filter-font);
 	display: inline;
 }
 
@@ -213,8 +289,12 @@ input:hover {
 	padding: 1rem 2rem;
 }
 
-.project--item:nth-child(4n) a {
+.project--item:nth-child(4n+1) a {
 	border-right: 1px solid white;
+}
+
+.project--item a:hover {
+	text-decoration: none;
 }
 
 .project--item a img {
@@ -225,7 +305,7 @@ input:hover {
 	align-items: center;
 }
 
-.item__line {
+.item--line {
 	margin-top: 24px;
 	border-bottom: 1px solid var(--yellow-color);
 	width: 100%;

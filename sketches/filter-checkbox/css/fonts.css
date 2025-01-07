@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Fahk';
+  src: url('../fonts/Fahkwang-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avara';
+  src: url('../fonts/Avara-Bold.otf') format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP';
+  src: url('../fonts/PPNeueMontreal-Book.otf') format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP-bold';
+  src: url('../fonts/PPNeueMontreal-Medium.otf') format('opentype');
+  font-style: normal;
+}

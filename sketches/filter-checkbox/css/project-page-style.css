@@ -1,0 +1,253 @@
+@import 'fonts.css';
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+:root {
+	--primary-font: 'Happy Times', serif;
+	--project-title-font: 'Iowan Old Style', serif;
+	--secondary-font: 'PP', sans-serif;
+	--menu-font: 'Arial', sans-serif;
+	--filter-font: 'Fahk', sans-serif;
+	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
+	--text-color: #100223;
+	--highlight-color: #5c490c;
+	--yellow-color: rgb(221, 255, 119);
+--blue-color: #5d00ff;
+	--grey-color: #c8c8c8;
+	--fade-in-effect: fadeIn 1s;
+	font-size: 16px;
+	font-family: var(--primary-font);
+	color: var(--text-color);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+::selection {
+	background-color: var(--highlight);
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+}
+
+main {
+	padding: 0 2rem;
+}
+
+a {
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+/* TOP MENU / "BACK TO PROJECTS PAGE" */
+
+.tab__container, .footer__container  {
+	overflow: hidden;
+	width: inherit;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	padding: 0.5rem;
+}
+
+.tab__container .button--back,
+.footer__container a {
+	padding: 1rem;
+	margin: 3px;
+	width: 100%;
+	font-family: var(--menu-font);
+	letter-spacing: -0.85px;
+	font-size: 1rem;
+	text-transform: uppercase;
+	color: var(--blue-color);
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	z-index: 10;
+border-radius: 100%;
+	border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.tab__container .button--back:hover,
+.footer__container a:hover {
+	transition: linear 0.25s;
+	color: var(--text-color);
+	border: 1px solid var(--text-color);
+}
+
+/* MAIN PROJECT PAGE SECTION */
+.project__container {
+	display: grid;
+	grid-template-columns: 1fr 42rem 1fr;
+	position: relative;
+}
+
+.project__sticky {
+	font-family: var(--filter-font);
+	width: 50%;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 13rem;
+	margin: 0 auto;
+	border: 1px solid var(--text-color);
+	box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 8px;
+}
+
+.project__sticky ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.project__sticky li:not(:last-child) {
+	border-bottom: 1px solid var(--text-color);
+}
+
+.project__sticky li p {
+	margin: 0.5rem 0 0 0;
+}
+
+.project__sticky .project--link,
+.project__sticky .project--category,
+.project__sticky .project--details {
+	font-size: var(--font-size-sm);
+	/* font-size: 0.75rem; */
+	padding: 1rem;
+	margin: 0;
+}
+
+.project__sticky .project--link,
+.project__sticky .project--details {
+	grid-column: 1/3;
+}
+
+.project__sticky .project--category:nth-child(odd) {
+	border-right: 1px solid var(--text-color);
+}
+
+.project__sticky .project--details {
+	color: var(--text-color);
+}
+
+.project__sticky a,
+.book-launch a {
+	color: var(--blue-color);
+	font-weight: bold;
+}
+
+.project__scroll {
+	grid-column: 2;
+	grid-row: 1 /3;
+}
+
+.project__scroll h1 {
+	text-align: center;
+	font-family: var(--primary-font);
+	font-weight: normal;
+	font-size: 2.5rem;
+	font-family: var(--project-title-font);
+}
+
+.quote__container {
+	display: grid;
+	grid-template-columns: 25% 1fr;
+	padding: 2rem 0;
+}
+
+.project__scroll .quote__container .quote__line {
+	height: auto;
+	width: 0.5rem;
+	background: var(--highlight-color);
+	margin-left: 95%;
+	box-shadow: var(--highlight-color) 1px 1px 3px 3px;
+}
+
+.project__scroll .quote__container p {
+	color: var(--highlight-color);
+	font-size: 1.15rem;
+	font-style: italic;
+	margin: 0rem;
+	text-align: left;
+	line-height: 1.15;
+	/* border-left: 0.5rem solid var(--highlight-color); */
+	padding-left: 5%;
+}
+
+.project__scroll p {
+	font-family: var(--secondary-font);
+	text-align: justify;
+}
+
+.project__scroll img {
+	width: 100%;
+	height: auto;
+}
+
+.book-launch {
+	border: 1px solid var(--highlight-color);
+	font-family: var(--secondary-font);
+}
+
+.book-launch h4 {
+	padding-left: 1rem;
+	text-transform: uppercase;
+}
+
+.book-launch ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.book-launch li {
+	padding: 1rem;
+	border-top: 1px dashed var(--highlight-color);
+}
+
+.footer__container a {
+display: block;
+margin-top: 10vh;
+}
+
+@media screen and (max-width: 1460px) {
+	:root {
+	}
+
+	.project__sticky {
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 1260px) {
+	:root {
+	}
+
+	.project__sticky {
+	}
+}
