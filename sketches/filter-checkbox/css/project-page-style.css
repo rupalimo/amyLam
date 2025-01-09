@@ -15,9 +15,10 @@
 	--secondary-font: 'PP', sans-serif;
 	--menu-font: 'Arial', sans-serif;
 	--filter-font: 'Fahk', sans-serif;
+		--category-font: 'Thabit', monospace; 
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
 	--text-color: #100223;
-	--highlight-color: #5c490c;
+	--highlight-color: #10712d;
 	--yellow-color: rgb(221, 255, 119);
 --blue-color: #5d00ff;
 	--grey-color: #c8c8c8;
@@ -82,7 +83,7 @@ a {
 	letter-spacing: -0.85px;
 	font-size: 1rem;
 	text-transform: uppercase;
-	color: var(--blue-color);
+	color: var(--grey-color);
 	outline: none;
 	cursor: pointer;
 	text-align: center;
@@ -95,8 +96,8 @@ border-radius: 100%;
 .tab__container .button--back:hover,
 .footer__container a:hover {
 	transition: linear 0.25s;
-	color: var(--text-color);
-	border: 1px solid var(--text-color);
+	color: var(--blue-color);
+	border: 1px solid var(--blue-color);
 }
 
 /* MAIN PROJECT PAGE SECTION */
@@ -113,8 +114,9 @@ border-radius: 100%;
 	position: sticky;
 	top: 13rem;
 	margin: 0 auto;
-	border: 1px solid var(--text-color);
-	box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 8px;
+	border: 1px solid var(--grey-color);
+	border-radius: 3px;
+	/* box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 8px; */
 }
 
 .project__sticky ul {
@@ -126,7 +128,7 @@ border-radius: 100%;
 }
 
 .project__sticky li:not(:last-child) {
-	border-bottom: 1px solid var(--text-color);
+	border-bottom: 1px solid var(--grey-color);
 }
 
 .project__sticky li p {
@@ -137,9 +139,12 @@ border-radius: 100%;
 .project__sticky .project--category,
 .project__sticky .project--details {
 	font-size: var(--font-size-sm);
-	/* font-size: 0.75rem; */
-	padding: 1rem;
+font-family: var(--category-font);
+	padding: 0.75rem;
 	margin: 0;
+	line-height: 1;
+	color: var(--highlight-color);
+
 }
 
 .project__sticky .project--link,
@@ -148,12 +153,9 @@ border-radius: 100%;
 }
 
 .project__sticky .project--category:nth-child(odd) {
-	border-right: 1px solid var(--text-color);
+	border-right: 1px solid var(--grey-color);
 }
 
-.project__sticky .project--details {
-	color: var(--text-color);
-}
 
 .project__sticky a,
 .book-launch a {

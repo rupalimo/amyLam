@@ -14,9 +14,10 @@
 	--secondary-font: 'PP', sans-serif;
 	--menu-font: 'Arial', sans-serif;
 	--filter-font: 'Fahk', sans-serif;
+	--category-font: 'Thabit', monospace; 
 	--text-color: #100223;
 	--yellow-color: #ddff77;
-	/* --blue-color: #c29aff; */
+--highlight-color: #10712d;
 	--blue-color: #5d00ff;
 	--grey-color: #c8c8c8;
 	--fade-in-effect: fadeIn 1s;
@@ -132,6 +133,10 @@ a:hover {
 	font-family: var(--filter-font);
 }
 
+.para__project span {
+	white-space: nowrap;
+}
+
 label {
 	margin-left: 0.125rem;
 	font-size: 1.75rem;
@@ -182,19 +187,34 @@ input[type='checkbox']:checked:hover {
 }
 
 /* landing page -- PROJECT SPOTLIGHT */
-.project--spotlight {
-	grid-column: 1/5;
-	grid-column-gap: 12px;
-	padding: 1rem 2rem;
-	border-bottom: 1px solid var(--yellow-color);
+
+.project__index {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: flex-start;
 }
 
-.project--spotlight:hover {
+.project__index a {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-left: -1px;
+	min-width: 0;
+	color: var(--text-color);
 	text-decoration: none;
 }
 
-.project--spotlight a {
-	color: var(--text-color);
+.project__index a:hover {
+	text-decoration: none;
+}
+
+.project--spotlight {
+	grid-column: 1/5;
+	grid-column-gap: 12px;
+	padding: 2rem;
+	border-bottom: 1px solid var(--yellow-color);
 }
 
 .project--spotlight img {
@@ -202,7 +222,7 @@ input[type='checkbox']:checked:hover {
 	float: left;
 	min-height: 400px;
 	background: rgb(233, 233, 233);
-	height: 100%;
+	height: auto;
 }
 
 .project--spotlight div {
@@ -211,24 +231,24 @@ input[type='checkbox']:checked:hover {
 	padding: 0 2rem;
 }
 
-.project--category {
-	font-family: var(--filter-font);
+.thumbnail .project--category {
+	font-family: var(--category-font);
 	display: inline;
+	color: var(--highlight-color);
+	border: 1px solid var(--grey-color);
+	border-radius: 3px;
+	padding: 0 4px 2px 4px;
+	font-size: 0.8rem;
 }
 
-.project--thumbnail h4 {
+.thumbnail h4 {
 	font-weight: normal;
-	font-size: 1.125rem;
+	font-size: 1.25rem;
 	margin: 1rem 0;
 }
 
-/* landing page -- PROJECT INDEX */
-
-.project__index {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	align-items: flex-start;
+.thumbnail p {
+	font-family: var(--secondary-font);
 }
 
 .project--item {
@@ -242,24 +262,14 @@ input[type='checkbox']:checked:hover {
 }
 
 .project--item a {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	align-items: center;
-	margin-left: -1px;
-	min-width: 0;
-	border-right: 1px solid var(--yellow-color);
-	color: var(--text-color);
-	padding: 1rem 2rem;
+		padding: 1rem 2rem;
+			border-right: 1px solid var(--yellow-color);
 }
 
-.project--item:nth-child(4n + 1) a {
+.project--item:nth-child(4n+1) a {
 	border-right: 1px solid white;
 }
 
-.project--item a:hover {
-	text-decoration: none;
-}
 
 .project--item a img {
 	height: 200px;
