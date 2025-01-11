@@ -12,10 +12,10 @@
 :root {
 	--primary-font: 'Happy Times', serif;
 	--project-title-font: 'Iowan Old Style', serif;
-	--secondary-font: 'PP', sans-serif;
+	--secondary-font: 'Barlow', sans-serif;
 	--menu-font: 'Arial', sans-serif;
 	--filter-font: 'Fahk', sans-serif;
-		--category-font: 'Thabit', monospace; 
+		--category-font: 'VG500', monospace; 
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
 	--text-color: #100223;
 	--highlight-color: #10712d;
@@ -143,7 +143,7 @@ font-family: var(--category-font);
 	padding: 0.75rem;
 	margin: 0;
 	line-height: 1;
-	color: var(--highlight-color);
+	color: var(--text-color);
 
 }
 

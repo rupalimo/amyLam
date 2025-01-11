@@ -10,6 +10,17 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Barlow';
+  src: url('../fonts/Barlow-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VG500';
+  src: url('../fonts/VG5000-Regular.otf') format('opentype');
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'Avara';
