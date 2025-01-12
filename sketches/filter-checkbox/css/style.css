@@ -213,24 +213,32 @@ input[type='checkbox']:checked:hover {
 }
 
 .project--spotlight {
-	grid-column: 1/5;
-	grid-column-gap: 12px;
 	padding: 2rem;
 	border-bottom: 1px solid var(--yellow-color);
 }
 
+.project--spotlight a {
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+}
+
+.project--spotlight .img__container {
+max-height: 500px;
+grid-column: 1/2;
+margin-right: 2rem;
+overflow: clip;
+display: flex
+;
+    justify-content: center;
+}
+
 .project--spotlight img {
-	width: 50%;
-	float: left;
-	min-height: 400px;
-	background: rgb(233, 233, 233);
-	height: auto;
+height: 100%;
+width: auto;
 }
 
 .project--spotlight div {
-	width: 50%;
-	float: right;
-	padding: 0 2rem;
+
 }
 
 .thumbnail .project--category {
@@ -274,7 +282,8 @@ input[type='checkbox']:checked:hover {
 
 
 .project--item a img {
-	height: 200px;
+	height: auto;
+	
 	width: 100%;
 	display: flex;
 	justify-content: center;
