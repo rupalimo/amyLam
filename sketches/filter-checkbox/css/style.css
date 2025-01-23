@@ -142,6 +142,7 @@ a:hover {
 
 .para__project span {
 	white-space: nowrap;
+	cursor: pointer;	
 }
 
 .para__project p {
@@ -182,10 +183,12 @@ input[type='checkbox']:checked {
 	background-size: contain;
 	width: 16px;
 	height: 16px;
+	cursor: pointer;
 }
 
 input[type='checkbox'] + label {
 	color: var(--disabled-color);
+	cursor: pointer;
 }
 
 input[type='checkbox']:checked + label {
@@ -199,8 +202,9 @@ input[type='checkbox']:hover {
 }
 
 input[type='checkbox']:checked:hover {
-	box-shadow: none;
+	box-shadow: var(--text-color) 0 0 1px 1px inset;
 }
+
 
 /* landing page -- PROJECT SPOTLIGHT */
 
@@ -246,8 +250,8 @@ input[type='checkbox']:checked:hover {
 }
 
 .project--spotlight .img__container img {
-	height: 100%;
-	width: auto;
+	width: 100%;
+
 }
 
 .project--spotlight .spotlight--tag {

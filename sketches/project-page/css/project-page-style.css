@@ -121,8 +121,6 @@ border-radius: 100%;
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	display: grid;
-	grid-template-columns: 50% 50%;
 }
 
 .project__sticky li:not(:last-child) {
@@ -133,7 +131,7 @@ border-radius: 100%;
 	margin: 0.5rem 0 0 0;
 }
 
-.project__sticky .project--link,
+
 .project__sticky .project--category,
 .project__sticky .project--details {
 	font-size: var(--font-size-sm);
@@ -142,7 +140,10 @@ border-radius: 100%;
 	margin: 0;
 }
 
-.project__sticky .project--link,
+.project__sticky .project--category li {
+width: 50%;
+}
+
 .project__sticky .project--details {
 	grid-column: 1/3;
 }
