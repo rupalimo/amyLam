@@ -155,10 +155,13 @@ width: 50%;
 		border: 1px solid var(--disabled-color);
 }
 
-.project__sticky .project--category li + li {
+.project__sticky .project--category li:nth-child(even) {
 	border-left: none;
 }
 
+.project__sticky .project--category li:nth-child(n+3) {
+	border-top: none;
+}
 
 .project__sticky .project--details li {
 	border-radius: 0;
