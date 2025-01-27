@@ -229,6 +229,10 @@ a {
 	text-align: justify;
 }
 
+.project__scroll p a {
+text-decoration: underline;
+}
+
 .project__scroll img,
 .project__scroll .video-embed {
 	width: 100%;
