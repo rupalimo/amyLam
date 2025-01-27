@@ -198,7 +198,7 @@ a {
 	padding: 2rem 0;
 }
 
-.project__scroll .quote__container .quote__line {
+.project__scroll .quote__container .quote--line {
 	height: 90%;
 	width: 6px;
 	background: #9bffc7;
@@ -206,9 +206,10 @@ a {
 	box-shadow: #9dff94 0px 0px 1px 3px;
 	z-index: 2;
 	border-radius: 12px;
+	grid-column: 1;
 }
 
-.project__scroll .quote__container p {
+.project__scroll .quote__container .quote--content {
 	color: var(--text-color);
 	font-size: 1.15rem;
 	font-style: italic;
@@ -216,6 +217,11 @@ a {
 	text-align: left;
 	line-height: 1.15;
 	padding: 3% 3% 3% 6%;
+	grid-column: 2;
+}
+
+.project__scroll .quote__container .quote--content p {
+	margin: 0;
 }
 
 .project__scroll p {
@@ -234,15 +240,17 @@ a {
 	width: 100%;
 }
 
-
 .book-launch {
-	/* border: 1px solid var(--divider-color); */
+
 	font-family: var(--secondary-font);
+	padding: 1rem  0;
+
 }
 
 .book-launch h4 {
-	padding-left: 1rem;
+	text-align: center;
 	text-transform: uppercase;
+	margin-bottom: 0.5rem;
 }
 
 .book-launch ul {
@@ -252,8 +260,9 @@ a {
 }
 
 .book-launch li {
-	padding: 1rem 0;
-	border-top: 1px solid var(--divider-color);
+	padding: 0.5rem 0;
+
+text-align: center;
 }
 
 .book-launch li::before {
