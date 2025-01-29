@@ -41,7 +41,7 @@
 }
 
 ::selection {
-	background-color: var(--divider);
+	background: var(--disabled-color);
 }
 
 html,
@@ -156,6 +156,7 @@ a {
 .project__sticky .project--category li {
 	width: 50%;
 	border: 1px solid var(--disabled-color);
+	text-transform: capitalize;
 }
 
 .project__sticky .project--category li:nth-child(even) {
@@ -231,6 +232,10 @@ a {
 
 .project__scroll p a {
 text-decoration: underline;
+padding: 0 2px;
+font-weight: bold;
+text-underline-offset: 2px;
+text-decoration-thickness:1px;
 }
 
 .project__scroll img,
