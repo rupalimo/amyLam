@@ -188,21 +188,23 @@ input[type='checkbox']:checked {
 
 input[type='checkbox'] + label {
 	color: var(--disabled-color);
-	cursor: pointer;
 }
 
 input[type='checkbox']:checked + label {
 	color: var(--text-color);
 	/* text-decoration: underline; */
 	color: var(--text-color);
+
 }
 
 input[type='checkbox']:hover {
 	box-shadow: var(--disabled-color) 0 0 1px 1px inset;
+		cursor: pointer;
 }
 
 input[type='checkbox']:checked:hover {
 	box-shadow: var(--text-color) 0 0 1px 1px inset;
+		cursor: pointer;
 }
 
 
