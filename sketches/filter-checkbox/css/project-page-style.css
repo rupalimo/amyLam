@@ -18,11 +18,11 @@
 	--category-font: 'VG500', monospace;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
 	--text-color: #100223;
-	--divider-color: #cfffcb;
-	--menu-color: #b487e9;
-	--link-color: #e6900a;
-	/* --link-color: #497f14; */
-	--disabled-color: #a4a4a4;
+	--divider-color: rgb(83, 255, 94);
+	--menu-color: rgb(255, 84, 0);
+	--menubk-color: #f6f5f5;
+	--link-color: #2414dd;
+	--disabled-color: rgb(144, 146, 140);
 	--fade-in-effect: fadeIn 1s;
 	font-size: 16px;
 	font-family: var(--primary-font);
@@ -106,7 +106,7 @@ a {
 /* MAIN PROJECT PAGE SECTION */
 .project__container {
 	display: grid;
-	grid-template-columns: 1fr 42rem 1fr;
+	grid-template-columns: 1fr 50% 1fr;
 	position: relative;
 }
 
@@ -206,9 +206,9 @@ a {
 .project__scroll .quote__container .quote--line {
 	height: 90%;
 	width: 6px;
-	background: #9bffc7;
+	background: var(--divider-color);
 	margin: auto 103%;
-	box-shadow: #9dff94 0px 0px 1px 3px;
+	box-shadow: var(--divider-color) 0px 0px 1px 3px;
 	z-index: 2;
 	border-radius: 12px;
 	grid-column: 1;
@@ -235,11 +235,11 @@ a {
 }
 
 .project__scroll p a {
-text-decoration: underline;
-padding: 0 2px;
-font-weight: bold;
-text-underline-offset: 2px;
-text-decoration-thickness:1px;
+	text-decoration: underline;
+	padding: 0 2px;
+	font-weight: bold;
+	text-underline-offset: 2px;
+	text-decoration-thickness: 1px;
 }
 
 .project__scroll img,
@@ -254,10 +254,8 @@ text-decoration-thickness:1px;
 }
 
 .book-launch {
-
 	font-family: var(--secondary-font);
-	padding: 1rem  0;
-
+	padding: 1rem 0;
 }
 
 .book-launch h4 {
@@ -275,7 +273,7 @@ text-decoration-thickness:1px;
 .book-launch li {
 	padding: 0.5rem 0;
 
-text-align: center;
+	text-align: center;
 }
 
 .book-launch li::before {
