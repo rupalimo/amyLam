@@ -90,18 +90,16 @@ a {
 	cursor: pointer;
 	text-align: center;
 	text-decoration: none;
-	z-index: 10;
-	border-radius: 0;
-	/* border: 1px solid rgba(0, 0, 0, 0); */
-	border: 1px solid #ffffff;
+z-index: 2;
 }
 
 .tab__container .button--back:hover,
 .footer__container a:hover {
 	transition: linear 0.25s;
-	color: var(--disabled-color);
-	border: 1px solid var(--disabled-color);
+	color: var(--menu-color);
+	/* border: 1px solid var(--disabled-color); */
 }
+
 
 /* MAIN PROJECT PAGE SECTION */
 .project__container {
@@ -288,6 +286,18 @@ a {
 .footer__container a {
 	display: block;
 	margin-top: 10vh;
+}
+
+footer {
+	position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 0px;
+  width: 100vw;
+  background: #fff0;
+  z-index: 1;
+box-shadow: white 0 0px 48px 12px;
+filter: blur(6px);
 }
 
 @media screen and (max-width: 1260px) {
