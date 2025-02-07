@@ -10,27 +10,22 @@
 }
 
 :root {
-	--primary-font: 'Iowan Old Style', serif;
-	--secondary-font: 'Barlow', sans-serif;
+	--project-title-font: 'Iowan Old Style', serif;
+	--body-font: 'Barlow', sans-serif;
 	--menu-font: 'Arial', sans-serif;
 	--filter-font: 'Fahk', sans-serif;
 	--category-font: 'VG500', monospace;
+	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
 	--text-color: #28262b;
-	/* --divider-color: rgb(201, 135, 255);
-  --menu-color: rgb(255, 84, 0);
-  --menubk-color: #f6f5f5;
-  --link-color: #1cbb1f;
-  --disabled-color: rgb(144, 146, 140); */
-
 	--divider-color: rgb(83, 255, 94);
 	--menu-color: rgb(255, 84, 0);
 	--menubk-color: #f6f5f5;
 	--link-color: #2414dd;
 	--disabled-color: rgb(144, 146, 140);
-
 	--fade-in-effect: fadeIn 1s;
+	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
 	font-size: 16px;
-	font-family: var(--primary-font);
+	font-family: var(--project-title-font);
 	color: var(--text-color);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -281,7 +276,7 @@ input[type='checkbox']:checked:hover {
 }
 
 .thumbnail p {
-	font-family: var(--secondary-font);
+	font-family: var(--body-font);
 }
 
 .project--item {
@@ -328,14 +323,27 @@ input[type='checkbox']:checked:hover {
 	position: relative;
 }
 
-.para__about img {
-	height: auto;
-	max-width: 350px;
-	width: 40%;
+.para__about figure {
 	margin: 0 auto;
+	padding: 0 2rem 0rem 0;
 	float: left;
-	padding: 0 2rem 1rem 0;
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	max-width: 350px;
 	background: white;
+}
+
+.para__about figure img {
+	height: auto;
+	border: 1px solid var(--disabled-color);
+}
+
+.para__about figure figurecaption {
+	font-family: var(--body-font);
+	font-size: var(--font-size-sm);
+	margin: 0.25rem;
+	color: var(--disabled-color)
 }
 
 .para__about div p {
