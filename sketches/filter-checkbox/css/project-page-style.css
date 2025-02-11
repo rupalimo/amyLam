@@ -113,7 +113,7 @@ a {
 }
 
 .project__sticky {
-font-family: var(--category-font);
+	font-family: var(--category-font);
 	width: 50%;
 	min-width: 200px;
 	position: -webkit-sticky;
@@ -149,7 +149,6 @@ font-family: var(--category-font);
 	margin-top: 0;
 }
 
-
 .project__sticky .project--category li {
 	width: 50%;
 	border: 1px solid var(--disabled-color);
@@ -178,7 +177,6 @@ font-family: var(--category-font);
 .project__sticky a,
 .book-launch a {
 	color: var(--link-color);
-	font-weight: bold;
 }
 
 .project__scroll {
@@ -236,8 +234,12 @@ font-family: var(--category-font);
 	text-align: justify;
 }
 
-.project__scroll p a, figurecaption a {
+.project__scroll p a {
 	text-decoration: underline;
+}
+
+.project__scroll p a,
+figurecaption a {
 	padding: 0 2px;
 	font-weight: bold;
 	text-underline-offset: 2px;
@@ -269,10 +271,9 @@ font-family: var(--category-font);
 }
 
 .project__container .project--imgs figurecaption {
-margin: 1rem 0.5rem;
-width: 50%;
-font-size: var(--font-size-sm);
-
+	margin: 1rem 0.5rem;
+	width: 50%;
+	font-size: var(--font-size-sm);
 }
 
 .project__scroll .video-embed iframe {
@@ -309,6 +310,8 @@ font-size: var(--font-size-sm);
 
 .book-launch a {
 	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
 }
 
 .footer__container a {
