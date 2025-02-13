@@ -473,6 +473,12 @@ mix-blend-mode: color-burn;
 	margin: 1rem 1rem 3rem 1rem;
 }
 
+.newsItem__container span {
+	display: flex;
+  justify-content: center;
+  grid-column: 1/3;
+}
+
 .newsItem--category {
 	grid-column: 1 / 3;
 	margin: 0;
@@ -512,8 +518,6 @@ text-decoration: none;
 	font-size: 1rem;
 	grid-column: 1 / 3;
 	margin: 0;
-		text-transform: uppercase;
-	letter-spacing: -0.85px;
 	text-align: center;
 }
 
