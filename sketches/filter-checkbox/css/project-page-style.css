@@ -17,10 +17,10 @@
 	--category-font: 'VG500', monospace;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
 --text-color: #28262b;
-  --divider-color: rgb(234, 222, 35);
-  --menu-color: rgb(255, 0, 0);
+  --divider-color: #ff46eb;
+  --menu-color: #2c00ff;
   --menubk-color: #f6f5f5;
-  --link-color: #6242ff;
+  --link-color: #ff8300;
   --disabled-color: #90928c;
 	--fade-in-effect: fadeIn 1s;
 	font-size: 16px;
