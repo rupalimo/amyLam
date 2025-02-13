@@ -540,7 +540,7 @@ color: var(--link-color);
 }
 
 .press--tab:hover {
-	background: var(--menubk-color);
+	background: var(--divider-color);
 }
 
 .para__press {
