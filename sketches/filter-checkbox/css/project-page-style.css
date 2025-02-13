@@ -331,8 +331,15 @@ footer {
 	filter: blur(6px);
 }
 
-@media screen and (max-width: 1260px) {
+
+@media (max-width: 1240px) {
+	
 }
 
-@media screen and (max-width: 780px) {
+@media (max-width: 780px) {
+	
+}
+
+@media (max-width: 640px) {
+
 }
