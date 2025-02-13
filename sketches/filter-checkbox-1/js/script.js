@@ -29,14 +29,14 @@ function showNews(evt, tabName) {
 	}
 
 	// Get all elements with class="tabitems" and remove the class "active"
-	newsItem = document.getElementsByClassName('news--toggle');
+	newsItem = document.getElementsByClassName('news--tab');
 	for (i = 0; i < newsItem.length; i++) {
-		newsItem[i].className = newsItem[i].className.replace(' btn--on', '');
+		newsItem[i].className = newsItem[i].className.replace(' on', '');
 	}
 
 	// Show the current tab, and add an "active" class to the button that opened the tab
 	document.getElementById(tabName).style.display = 'block';
-	evt.currentTarget.className += ' btn--on';
+	evt.currentTarget.className += ' on';
 }
 
 document.getElementById('defaultNow').click();

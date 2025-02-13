@@ -16,12 +16,12 @@
 	--filter-font: 'Fahk', sans-serif;
 	--category-font: 'VG500', monospace;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
-	--text-color: #28262b;
-	--divider-color: rgb(83, 255, 94);
-	--menu-color: rgb(255, 84, 0);
-	--menubk-color: #f6f5f5;
-	--link-color: #2414dd;
-	--disabled-color: #90928c;
+--text-color: #28262b;
+  --divider-color: rgb(234, 222, 35);
+  --menu-color: rgb(255, 0, 0);
+  --menubk-color: #f6f5f5;
+  --link-color: #6242ff;
+  --disabled-color: #90928c;
 	--fade-in-effect: fadeIn 1s;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
 	font-size: 16px;
@@ -101,7 +101,7 @@ a:hover {
 	background-color: rgba(255, 255, 255, 0);
 	border: 1px solid var(--menu-color);
 	color: var(--menu-color);
-	background: var(--menubk-color);
+	/* background: var(--menubk-color); */
 	outline: none;
 	cursor: pointer;
 	padding: 1rem;
@@ -127,7 +127,7 @@ a:hover {
 	color: var(--menu-color);
 	z-index: 10;
 	border-radius: 100%;
-	box-shadow: var(--menu-color) 0px 0px 4px 8px inset;
+	box-shadow: var(--menu-color) 0px 0px 1px 0px inset;
 	border: 1px solid var(--menu-color);
 }
 
@@ -139,7 +139,7 @@ a:hover {
 
 /* landing page -- INTRO TEXT W FILTER */
 .para__project {
-	border-bottom: 1px dotted var(--divider-color);
+	border-bottom: 1px solid var(--menubk-color);
 	width: 100%;
 	display: inline-block;
 }
@@ -255,7 +255,7 @@ input[type='checkbox']:checked:hover {
 
 .project--spotlight {
 	padding: 2rem;
-	border-bottom: 1px dotted var(--divider-color);
+	border-bottom: 1px solid var(--menubk-color);
 }
 
 .project--spotlight a {
@@ -286,7 +286,7 @@ input[type='checkbox']:checked:hover {
 } 
 .thumbnail:hover {
 	border-radius: 100%;
-	border: 1px dotted var(--divider-color);
+	border: 1px solid var(--divider-color);
 	transition: linear 0.125s;
 }
 
@@ -332,7 +332,7 @@ mix-blend-mode: color-burn;
 
 .project--item a {
 	padding: 1rem 2rem;
-	border-right: 1px solid var(--divider-color);
+	border-right: 1px solid var(--menubk-color);
 }
 
 .project--item:nth-child(4n + 1) a {
@@ -353,7 +353,7 @@ mix-blend-mode: color-burn;
 
 .item--line {
 	margin-top: 24px;
-	border-bottom: 1px dotted var(--divider-color);
+	border-bottom: 1px solid var(--menubk-color);
 	width: 100%;
 }
 
@@ -436,37 +436,89 @@ mix-blend-mode: color-burn;
 }
 
 /* news section */
+.para__news:not(:first-of-type) {
+	display: none;
+}
 
-.para__news ul {
-	list-style: none;
-	padding: 0;
-	border-bottom: 1px dotted var(--divider-color);
-	padding-bottom: 1.5rem;
+.news__tabs {
+	display: flex;
+	padding: 2rem 0 1rem 0;
+	justify-content: center;
 }
-.para__news p + li {
-	margin: 0.5rem;
-}
-.para__news li + li,
-.para__news li + li a {
-	margin: 0;
+
+.news--tab {
+	color: var(--disabled-color);
 	font-family: var(--menu-font);
 	font-size: 1.25rem;
+	border: 1px var(--divider-color);
+	background: #fff;
+	border-style: dotted solid;
+	padding: 0.25rem;
+	width: 10vw;
+	min-width: 100px;
 }
 
-.para__news li,
-.para__news p {
-	text-align: center;
+.news--tab:hover {
+	cursor: pointer;
+	color: var(--link-color);
 }
 
-.para__news p {
-	margin: 3px;
+.on {
+	color: var(--link-color);
 }
-.para__news p,
-.para__press p {
+
+.newsItem__container {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	margin: 1rem 1rem 3rem 1rem;
+}
+
+.newsItem--category {
+	grid-column: 2;
+	margin: 0;
+	color: var(--disabled-color);
+	letter-spacing: 1ch;
+	font-size: 0.8rem;
 	font-family: var(--menu-font);
-	letter-spacing: -0.85px;
-	font-size: 1rem;
 	text-transform: uppercase;
+}
+
+.newsItem--date,
+.newsItem--title {
+	font-size: 1.75rem;
+	line-height: 1.25;
+	font-weight: normal;
+	margin: 2px 0 4px 0;
+
+}
+
+.newsItem--date {
+	text-align: right;
+	font-weight: normal;
+	font-family: var(--menu-font);
+	margin-right: 2rem;
+}
+
+.newsItem--title {
+	font-family: var(--filter-font);
+}
+
+a.newsItem--description {
+text-decoration: none;
+}
+
+.newsItem--description {
+	font-family: var(--menu-font);
+	font-size: 1rem;
+	grid-column: 2;
+	margin: 0;
+}
+
+.newsItem__container img {
+	grid-column: 2;
+	width: auto;
+	margin-top: 0.5rem;
+	max-height: 250px;
 }
 
 /* press section */
@@ -484,7 +536,12 @@ mix-blend-mode: color-burn;
 }
 .para__press p {
 	margin: 1.75rem 0 0 0;
+	font-family: var(--menu-font);
+	letter-spacing: -0.85px;
+	font-size: 1rem;
+	text-transform: uppercase;
 }
+
 .para__press div {
 	padding-bottom: 1.25rem;
 }
@@ -535,7 +592,7 @@ footer {
 	}
 
 	.project--item:nth-child(4n + 1) a {
-		border-right: 1px dotted var(--divider-color);
+		border-right: 1px dotted var(--menubk-color);
 	}
 
 	.project--item:nth-child(3n + 1) a {
