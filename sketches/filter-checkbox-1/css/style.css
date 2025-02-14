@@ -124,7 +124,7 @@ a {
 }
 
 .tab__container button:hover, .tab__container button.active {
-	letter-spacing: 0.5ch;
+	/* letter-spacing: 0.5ch; */
 }
 
 .tabcontent {
