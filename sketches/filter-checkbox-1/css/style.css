@@ -156,7 +156,7 @@ a {
 }
 
 .para__project p {
-	margin: 1rem;
+	margin: 1rem 0;
 }
 
 .para__project p + p {
