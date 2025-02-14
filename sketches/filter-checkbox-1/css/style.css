@@ -68,9 +68,6 @@ a {
 	cursor: pointer;
 }
 
-a:hover {
-}
-
 .button {
 	padding: 0.25rem;
 	margin: 0 auto;
@@ -96,37 +93,38 @@ a:hover {
 }
 
 .tab__container button {
-	background-color: rgba(255, 255, 255, 0);
-	border: 1px solid var(--menu-color);
+	border: 1px var(--menu-color);
+	border-style: solid solid none solid;
 	color: var(--menu-color);
-	background: var(--menubk-color);
+	background: #fff;
 	outline: none;
 	cursor: pointer;
 	padding: 1rem;
 	transition: linear 0.3s;
-	min-width: 15%;
+	min-width: 20%;
 	font-family: var(--menu-font);
 	letter-spacing: -0.85px;
 	font-size: 1rem;
-	margin: 3px;
 	text-transform: uppercase;
-	box-shadow: var(--menu-color) 0px 0px 1px 0px inset;
+	margin: 0;
+	border-radius: 3rem 3rem 1px 1px;
 }
 
 .tab__container button:hover {
-	border: 1px solid var(--menu-color);
-	color: var(--menu-color);
-	box-shadow: var(--menu-color) 0px 0px 4px 1px inset;
+	border-color: var(--menu-color);
 	transition: linear 0.125s;
 }
 
 .tab__container button.active {
 	flex-grow: 1;
+	border-color: var(--menu-color);
 	color: var(--menu-color);
-	z-index: 10;
-	border-radius: 100%;
-	/* box-shadow: var(--menu-color) 0px 0px 2px 2px inset; */
-	border: 1px solid var(--menu-color);
+	z-index: 2;
+	border-radius: 0;
+}
+
+.tab__container button:hover, .tab__container button.active {
+	letter-spacing: 0.5ch;
 }
 
 .tabcontent {
@@ -137,7 +135,6 @@ a:hover {
 
 /* landing page -- INTRO TEXT W FILTER */
 .para__project {
-	/* border-bottom: 1px dotted var(--divider-color); */
 	width: 100%;
 	display: inline-block;
 }
@@ -159,7 +156,7 @@ a:hover {
 }
 
 .para__project p {
-	margin-bottom: 1rem;
+	margin: 1rem;
 }
 
 .para__project p + p {
@@ -365,7 +362,7 @@ border-style: none none solid solid;
 /* about section -- AMY CHING-YAN LAM */
 
 .para__about {
-	margin-top: 2rem;
+	margin-top: 1rem;
 	position: relative;
 }
 
@@ -445,17 +442,19 @@ border-style: none none solid solid;
 	display: none;
 }
 
-.news__tabs, .press__tabs {
+.news__tabs,
+.press__tabs {
 	display: flex;
 	padding: 2rem 0 1rem 0;
 	justify-content: center;
 }
 
 .news--tab {
-	 color: var(--disabled-color);
+	color: var(--disabled-color);
 }
 
-.news--tab, .press--tab {
+.news--tab,
+.press--tab {
 	color: var(--divider-color);
 	font-family: var(--menu-font);
 	font-size: 1.25rem;
@@ -476,13 +475,14 @@ border-style: none none solid solid;
 	color: var(--link-color);
 }
 
-.newsItem__container {
+.newsItem__container, .pressItem__container article {
 	display: grid;
 	grid-template-columns: 50% 50%;
 	margin: 1rem 1rem 3rem 1rem;
 }
 
-.newsItem--category, .pressItem--year {
+.newsItem--category,
+.pressItem--year {
 	grid-column: 2;
 	margin: 0;
 	color: var(--disabled-color);
@@ -493,7 +493,8 @@ border-style: none none solid solid;
 }
 
 .newsItem--date,
-.newsItem--title, .pressItem--title   {
+.newsItem--title, .pressItem--source,
+.pressItem--title {
 	font-size: 1.75rem;
 	line-height: 1.25;
 	font-weight: normal;
@@ -502,29 +503,32 @@ border-style: none none solid solid;
 	/* text-decoration: none; */
 }
 
-.newsItem--date {
+.newsItem--date, .pressItem--source  {
 	text-align: right;
 	font-weight: normal;
 	font-family: var(--menu-font);
-	margin-right: 2rem;
+	margin-right: 1rem;
 }
 
-.newsItem--title, .pressItem--title {
+.newsItem--title,
+.pressItem--title {
 	font-family: var(--filter-font);
 }
 
-a.newsItem--description, a.pressItem--description  {
-text-decoration: none;
+a.newsItem--description,
+a.pressItem--description {
+	text-decoration: none;
 }
 
-.newsItem--description, .pressItem--description {
+.newsItem--description,
+.pressItem--description {
 	font-family: var(--menu-font);
 	font-size: 1rem;
 	grid-column: 2;
 	margin: 0;
 }
 
-.newsItem__container img {
+.newsItem__container img, .pressItem__container img {
 	grid-column: 2;
 	width: auto;
 	margin-top: 0.5rem;
@@ -534,9 +538,9 @@ text-decoration: none;
 /* press section */
 
 .press--tab {
-text-align: center;
-text-decoration: none;
-color: var(--link-color);
+	text-align: center;
+	text-decoration: none;
+	color: var(--link-color);
 }
 
 .press--tab:hover {
@@ -545,19 +549,22 @@ color: var(--link-color);
 
 .para__press {
 	width: 100%;
-	text-align: center;
 }
 
 .pressItem__container:not(:last-of-type) {
-	border-bottom: 1px solid var(--menubk-color);
+	border-bottom: 1px dotted var(--divider-color);
 }
 
 .pressItem__container article {
-  margin: 1rem 1rem 2rem 1rem;
+	margin: 1rem 1rem 2rem 1rem;
 }
 
 .pressItem__container + .pressItem__container {
 	padding: 2rem 0;
+}
+
+.pressItem--year {
+	text-align: center;
 }
 
 footer {

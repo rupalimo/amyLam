@@ -114,7 +114,6 @@ a:hover {
 	text-transform: uppercase;
 	margin: 0;
 	border-radius: 3rem 3rem 1px 1px;
-	/* box-shadow: var(--menu-color) 0px 0px 1px 0px inset; */
 }
 
 .tab__container button:hover {
@@ -125,13 +124,9 @@ a:hover {
 .tab__container button.active {
 	flex-grow: 1;
 	border-color: var(--menu-color);
-
 	color: var(--menu-color);
 	z-index: 2;
 		border-radius: 0;
-	/* z-index: 10;
-	border-radius: 100%; */
-	/* box-shadow: var(--menu-color) 0px 0px 3px 2px inset; */
 }
 
 .tabcontent {
