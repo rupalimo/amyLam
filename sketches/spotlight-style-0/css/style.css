@@ -643,16 +643,18 @@ footer {
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	height: 1px;
-	width: 100vw;
+	height: 0.5rem;
+	width: 100%;
 	background: var(--menubk-color);
-	background-size: auto;
-	background-size: 600% 100%;
-	animation: gradient 16s linear infinite;
-	animation-direction: normal;
-	animation-direction: alternate;
 	z-index: 1;
-	box-shadow: #ffffffc6 0px 0px 24px 16px;
+	padding: 0 0.5rem;
+		/* box-shadow: rgb(213, 213, 213) 10px 10px 24px 24px; */
+
+}
+
+.footer-boundary {
+	border: 1px var(--menu-color);
+	border-style: none solid solid solid;
 }
 
 @media (max-width: 1240px) {
