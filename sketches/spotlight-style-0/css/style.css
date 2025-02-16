@@ -11,17 +11,15 @@
 
 @keyframes marquee {
 	0% {
-
-		left:46%;
+		left: 46%;
 	}
 
 	25% {
-	
 		left: 84%;
 	}
 
 	50% {
-		left:46%;
+		left: 46%;
 	}
 
 	75% {
@@ -93,7 +91,6 @@ a {
 
 .button {
 	padding: 0.25rem;
-	margin: 0 auto;
 	text-decoration: none;
 	border: 1px var(--divider-color);
 	border-style: dotted solid;
@@ -292,8 +289,8 @@ input[type='checkbox']:checked:hover {
 	animation: marquee 40s infinite linear;
 	z-index: 100;
 	bottom: 0.25rem;
-width: 300px;
-  justify-content: center;
+	width: 300px;
+	justify-content: center;
 }
 
 #marquee p {
@@ -466,8 +463,9 @@ width: 300px;
 	grid-template-columns: repeat(3, 1fr); */
 }
 
-.para__about .text--contact a {
-	width: 33.33%;
+.text--contact .button {
+	margin: 0 auto;
+		width: 33.33%;
 	display: block;
 	padding: 0.25rem;
 }
@@ -504,12 +502,16 @@ width: 300px;
 	color: var(--divider-color);
 	font-family: var(--menu-font);
 	font-size: 1.25rem;
-	border: 1px var(--divider-color);
 	background: #fff;
-	border-style: dotted solid;
-	padding: 0.25rem;
 	width: 10vw;
-	min-width: 100px;
+}
+
+.news--tab {
+	min-width: 175px;
+}
+
+.press--tab {
+	min-width: 350px;
 }
 
 .news--tab:hover {
@@ -526,6 +528,18 @@ width: 300px;
 	display: grid;
 	grid-template-columns: 50% 50%;
 	margin: 1rem 1rem 3rem 1rem;
+}
+
+.newsItem__container p {
+	grid-column: 2;
+	font-family: var(--menu-font);
+}
+
+.newsItem__container a {
+	grid-column: 2;
+}
+.newsItem__container h3 {
+	grid-column: 1;
 }
 
 .newsItem--category,
@@ -648,8 +662,7 @@ footer {
 	background: var(--menubk-color);
 	z-index: 1;
 	padding: 0 0.5rem;
-		/* box-shadow: rgb(213, 213, 213) 10px 10px 24px 24px; */
-
+	/* box-shadow: rgb(213, 213, 213) 10px 10px 24px 24px; */
 }
 
 .footer-boundary {

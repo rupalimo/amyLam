@@ -9,6 +9,21 @@
 	}
 }
 
+@keyframes animate-bold {
+	/* 0% {
+	letter-spacing: 0.0125ch;
+		font-weight: normal;
+	}
+	50% {
+		letter-spacing: 0ch;
+			font-weight: bold;
+	}
+	100% {
+		letter-spacing: 0.0125ch;
+		font-weight: normal;
+	} */
+}
+
 :root {
 	--project-title-font: 'Iowan Old Style', serif;
 	--body-font: 'Barlow', sans-serif;
@@ -179,6 +194,14 @@ a {
 	grid-row: 1 /3;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
+}
+
+.project__scroll .inline-bold {
+font-weight: bold;
+	padding: 0 2px 1px 4px;
+
+	background: var(--divider-color);
+	
 }
 
 .project__container .project--centered {
