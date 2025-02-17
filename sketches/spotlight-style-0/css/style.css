@@ -459,15 +459,14 @@ input[type='checkbox']:checked:hover {
 	padding: 0;
 	display: flex;
 	flex-direction: row;
-	/* display: grid;
-	grid-template-columns: repeat(3, 1fr); */
 }
 
 .text--contact .button {
 	margin: 0 auto;
-		width: 33.33%;
+	width: 33.33%;
 	display: block;
 	padding: 0.25rem;
+	align-content: center;
 }
 
 .text--disabled {
@@ -675,10 +674,6 @@ footer {
 		width: 31.5%;
 	}
 
-	.project--item:nth-child(3n + 1) a {
-		border-right: 1px dotted white;
-	}
-
 	.project--spotlight a {
 		grid-template-rows: 1fr auto;
 		grid-template-columns: 1fr;
@@ -695,44 +690,89 @@ footer {
 }
 
 @media (max-width: 780px) {
+	.para__project,
+	.para__news,
+	.para__press,
+	.para__about {
+		padding: 0 0 1.5rem 0;
+	}
+
+	/* LANDING PAGE STYLING */
 	.project--item {
 		width: 100%;
 	}
-
-	.project--item a {
-		border-right: 1px dotted white;
+	.project--item,
+	.thumbnail {
+		border-style: none dotted dotted dotted;
 	}
 
-	.project--item:nth-child(5) a,
-	.project--item:nth-child(9) a {
-		border-right: 1px dotted white;
+	.project--item:hover,
+	.thumbnail:hover {
+		border-style: none solid solid solid;
 	}
 
 	.para__project p {
 		line-height: 1.125;
 	}
+
+	/* NEWS STYLING */
+	.newsItem__container,
+	.pressItem__container article {
+		display: block;
+	}
+
+	.pressItem__container article {
+		margin: 1rem 0 3rem 0;
+	}
+
+		.newsItem__container {
+			margin: 2rem 0 3rem 0;
+		}
+
+	.newsItem--date,
+	.pressItem--source {
+		text-align: left;
+		font-size: 1.25rem;
+		margin: 0;
+	}
+
+	.newsItem--description,
+	.pressItem--description {
+		margin-top: 0.5rem;
+	}
+
+	.newsItem__container img {
+		margin-top: 1rem;
+	}
+
+	.newsItem--description + .newsItem--description {
+		margin-top: 0;
+	}
+
+	.newsItem--category {
+		margin: 2px 0;
+	}
+
+.para__about .text--contact {
+display: block;
+}
+
+	.text--contact .button {
+		width: 100%;
+	}
+
+		.text--contact .button:nth-of-type(even) {
+	border-style: none solid;
+	}
+
+	.para__about figure {
+		min-width: 260px;
+		float: none;
+		padding: 0 0 1rem 0;
+	}
 }
 
 @media (max-width: 640px) {
-	/* .para__project, .para__project label {
-	font-size: 1.5rem;
-	} */
-
-	main {
-		padding: 0 1rem;
-	}
-	.para__project,
-	.para__news,
-	.para__press,
-	.para__about {
-		padding: 0 1rem 1.5rem 1rem;
-	}
-
-	.project--spotlight,
-	.project--item a {
-		padding: 2rem 1rem;
-	}
-
 	.tabitems {
 		word-break: break-word;
 		width: 20%;
