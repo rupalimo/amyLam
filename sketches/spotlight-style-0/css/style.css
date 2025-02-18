@@ -795,12 +795,13 @@ footer {
 		border: 1px var(--disabled-color);
 		border-style: dotted dotted none dotted;
 		color: var(--disabled-color);
+		padding: 0.5rem 0;
 	}
 
 	.tab__container button.active {
 		border-radius: 3rem 3rem 0 0;
 		border-style: solid solid none solid;
-		padding: 1rem 0 2rem 0;
+padding: 1rem 0 1.5rem 0;
 	}
 
 	.thumbnail {
