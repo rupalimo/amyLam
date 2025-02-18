@@ -30,6 +30,28 @@
 	}
 }
 
+
+@keyframes marquee--mobile {
+	0% {
+		left: 28%;
+	}
+
+	25% {
+		left: 62%;
+	}
+
+	50% {
+		left: 28%;
+	}
+
+	75% {
+		left: -6%;
+	}
+	100% {
+		left: 28%;
+	}
+}
+
 :root {
 	--project-title-font: 'Iowan Old Style', serif;
 	--body-font: 'Barlow', sans-serif;
@@ -716,6 +738,7 @@ footer {
 	.project--item {
 		width: 100%;
 	}
+
 	.project--item,
 	.thumbnail {
 		border-style: none dotted dotted dotted;
@@ -725,6 +748,10 @@ footer {
 	.thumbnail:hover {
 		border-style: none solid solid solid;
 	}
+
+	#marquee {
+	animation: marquee--mobile 20s infinite linear;
+}
 
 	.para__project p {
 		line-height: 1.125;
