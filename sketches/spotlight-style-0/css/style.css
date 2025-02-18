@@ -318,6 +318,10 @@ input[type='checkbox']:checked:hover {
 	height: auto;
 }
 
+.project--spotlight .img__container .mobile--show {
+	display: none;
+}
+
 .project--spotlight .spotlight--tag {
 	width: 150px;
 }
@@ -663,7 +667,6 @@ footer {
 	background: var(--menubk-color);
 	z-index: 1;
 	padding: 0 0.5rem;
-	/* box-shadow: rgb(213, 213, 213) 10px 10px 24px 24px; */
 }
 
 .footer-boundary {
@@ -700,6 +703,15 @@ footer {
 	}
 
 	/* LANDING PAGE STYLING */
+
+	.project--spotlight .img__container .mobile--show {
+			display: block;
+	}
+
+	.project--spotlight .img__container .mobile--hide {
+			display: none;
+	}
+
 	.project--item {
 		width: 100%;
 	}
