@@ -455,7 +455,7 @@ input[type='checkbox']:checked:hover {
 	border: 1px solid var(--disabled-color);
 }
 
-.para__about figure figurecaption {
+.para__about figure figcaption {
 	font-family: var(--body-font);
 	font-size: var(--font-size-sm);
 	margin: 0.25rem;
@@ -838,6 +838,10 @@ footer {
 
 	.tabitems {
 		word-break: break-word;
+	}
+
+	.para__about figure figcaption {
+		font-size: 9px;
 	}
 
 	.news--tab {
