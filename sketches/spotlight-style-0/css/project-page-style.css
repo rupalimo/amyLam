@@ -375,6 +375,10 @@ footer {
 		display: block;
 	}
 
+	.project__scroll .video-embed {
+		width: 100%;
+	}
+
 	figcaption {
 		padding: 0;
 		width: 100%;
@@ -462,7 +466,6 @@ footer {
 		text-align: left;
 		color: var(--disabled-color);
 	}
-
 }
 
 @media (max-width: 640px) {
