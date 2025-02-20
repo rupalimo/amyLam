@@ -16,9 +16,9 @@
 	--filter-font: 'Fahk', sans-serif;
 	--category-font: 'VG500', monospace;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
-	--text-color: #233b43;
-	--divider-color: #88ffd8;
-	--menu-color:#233b43;
+	--text-color: #4f4d32;
+	--divider-color: #aaffcb;
+	--menu-color: #4f4d32;
 	--menubk-color: #ffffff;
 	--link-color: #9d71ff;
 	--disabled-color: #8c9292;
@@ -319,7 +319,6 @@ input[type='checkbox']:checked:hover {
 	margin: 0;
 }
 
-
 .thumbnail {
 	padding: 0 2rem 2rem 2rem;
 	transition: linear 0.125s;
@@ -530,7 +529,7 @@ news--tab:hover {
 .pressItem__container article {
 	display: grid;
 	grid-template-columns: 50% 50%;
-	margin: 1rem 1rem 3rem 1rem;
+	margin: 0rem 1rem 3rem 1rem;
 }
 
 .newsItem__container p {
@@ -705,7 +704,7 @@ footer {
 	}
 
 	/* LANDING PAGE STYLING */
-.spotlight__container .img__container .mobile--show {
+	.spotlight__container .img__container .mobile--show {
 		display: block;
 	}
 
@@ -805,14 +804,14 @@ footer {
 		padding: 0.5rem 0;
 	}
 
-  .tab__container button.active {
-    border-radius: 3rem 3rem 0 0;
-    padding: 1rem 0 1.5rem 0;
-    border: 3px solid var(--text-color);
-    border-bottom: none;
-    font-weight: bold;
+	.tab__container button.active {
+		border-radius: 3rem 3rem 0 0;
+		padding: 1rem 0 1.5rem 0;
+		border: 3px solid var(--text-color);
+		border-bottom: none;
+		font-weight: bold;
 		letter-spacing: 0.1ch;
-  }
+	}
 
 	.thumbnail {
 		padding: 0 1rem 1.5rem 1em;
