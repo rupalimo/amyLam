@@ -9,48 +9,6 @@
 	}
 }
 
-@keyframes marquee {
-	0% {
-		left: 46%;
-	}
-
-	25% {
-		left: 84%;
-	}
-
-	50% {
-		left: 46%;
-	}
-
-	75% {
-		left: 0;
-	}
-	100% {
-		left: 46%;
-	}
-}
-
-@keyframes marquee--mobile {
-	0% {
-		left: 28%;
-	}
-
-	25% {
-		left: 62%;
-	}
-
-	50% {
-		left: 28%;
-	}
-
-	75% {
-		left: -6%;
-	}
-	100% {
-		left: 28%;
-	}
-}
-
 :root {
 	--project-title-font: 'Iowan Old Style', serif;
 	--body-font: 'Barlow', sans-serif;
@@ -58,11 +16,11 @@
 	--filter-font: 'Fahk', sans-serif;
 	--category-font: 'VG500', monospace;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
-	--text-color: #222526;
-	--divider-color: #ffead8;
-	--menu-color:#222526;
+	--text-color: #233b43;
+	--divider-color: #88ffd8;
+	--menu-color:#233b43;
 	--menubk-color: #ffffff;
-	--link-color: rgb(73, 65, 179);
+	--link-color: #9d71ff;
 	--disabled-color: #8c9292;
 	--fade-in-effect: fadeIn 1s;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
@@ -137,7 +95,7 @@ a {
 
 .tab__container button {
 	border: 1px var(--menu-color);
-	border-style: solid solid none solid;
+	border-style: dotted solid none solid;
 	color: var(--menu-color);
 	background: #fff;
 	outline: none;
@@ -371,7 +329,7 @@ input[type='checkbox']:checked:hover {
 }
 
 .thumbnail:hover {
-	border-style: none none solid solid;
+	border-style: none none dotted solid;
 	border-color: var(--link-color);
 }
 
