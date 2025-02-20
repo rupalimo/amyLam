@@ -440,8 +440,6 @@ input[type='checkbox']:checked:hover {
 }
 
 .item--line {
-	/* margin-top: 1rem; */
-	/* border-bottom: 1px dotted var(--divider-color); */
 	width: 100%;
 }
 
