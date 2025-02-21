@@ -19,6 +19,18 @@
 	}
 }
 
+@keyframes marquee--mobile {
+	0% {
+		left: 100%;
+	}
+ 50% {
+	left: -10%;
+ }
+100% {
+		left: -120%;
+	}
+}
+
 :root {
 	--project-title-font: 'Iowan Old Style', serif;
 	--body-font: 'Barlow', sans-serif;
@@ -675,6 +687,10 @@ footer {
 		width: 31.5%;
 	}
 
+	.marquee-offset {
+		display: none;
+	}
+	
 	.project--spotlight a {
 		grid-template-rows: 1fr auto;
 		grid-template-columns: 1fr;
@@ -700,6 +716,18 @@ footer {
 
 	/* LANDING PAGE STYLING */
 
+	.marquee {
+	left: -100%;
+	top: 0.25rem;
+	position: absolute;
+	z-index: 100;
+	animation: marquee--mobile 20s infinite linear;
+}
+
+	.marquee p {
+		font-size: 4rem;
+	}
+
 	.project--spotlight .img__container .mobile--show {
 		display: block;
 	}
@@ -720,10 +748,6 @@ footer {
 	.project--item:hover,
 	.thumbnail:hover {
 		border-style: none solid solid solid;
-	}
-
-	#marquee {
-		animation: marquee--mobile 20s infinite linear;
 	}
 
 	.para__project p {
