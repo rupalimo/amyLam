@@ -9,20 +9,6 @@
 	}
 }
 
-@keyframes animate-bold {
-	/* 0% {
-	letter-spacing: 0.0125ch;
-		font-weight: normal;
-	}
-	50% {
-		letter-spacing: 0ch;
-			font-weight: bold;
-	}
-	100% {
-		letter-spacing: 0.0125ch;
-		font-weight: normal;
-	} */
-}
 
 :root {
 	--project-title-font: 'Iowan Old Style', serif;
@@ -31,11 +17,11 @@
 	--filter-font: 'Fahk', sans-serif;
 	--category-font: 'VG500', monospace;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
-	--text-color: #19261a;
-	--divider-color: #cde0e4;
-	--menu-color: #0fe464;
+	--text-color: #3c1515;
+	--divider-color: #aaffcb;
+	--menu-color: #3c1515;
 	--menubk-color: #ffffff;
-	--link-color: #7c35df;
+	--link-color: #9d71ff;
 	--disabled-color: #8c9292;
 	--fade-in-effect: fadeIn 1s;
 	font-size: 16px;

@@ -16,11 +16,11 @@
 	--filter-font: 'Fahk', sans-serif;
 	--category-font: 'VG500', monospace;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
-	--text-color: #4f4d32;
+	--text-color: #3c1515;
 	--divider-color: #aaffcb;
-	--menu-color: #4f4d32;
+	--menu-color: #3c1515;
 	--menubk-color: #ffffff;
-	--link-color: #9d71ff;
+	--link-color: #7651ff;
 	--disabled-color: #8c9292;
 	--fade-in-effect: fadeIn 1s;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
