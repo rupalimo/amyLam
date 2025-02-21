@@ -10,44 +10,12 @@
 }
 
 @keyframes marquee {
-	0% {
-		left: 46%;
+	from {
+		left: 100%;
 	}
 
-	25% {
-		left: 84%;
-	}
-
-	50% {
-		left: 46%;
-	}
-
-	75% {
-		left: 0;
-	}
-	100% {
-		left: 46%;
-	}
-}
-
-@keyframes marquee--mobile {
-	0% {
-		left: 28%;
-	}
-
-	25% {
-		left: 62%;
-	}
-
-	50% {
-		left: 28%;
-	}
-
-	75% {
-		left: -6%;
-	}
-	100% {
-		left: 28%;
+	to {
+		left: -70%;
 	}
 }
 
@@ -58,11 +26,11 @@
 	--filter-font: 'Fahk', sans-serif;
 	--category-font: 'VG500', monospace;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
-	--text-color: #19261a;
-	--divider-color: #cde0e4;
-	--menu-color: #0fe464;
+	--text-color: #4d4c5b;
+	--divider-color:  #beffa3;
+	--menu-color:#4d4c5b;
 	--menubk-color: #ffffff;
-	--link-color: #7c35df;
+	--link-color: #5100ff;
 	--disabled-color: #8c9292;
 	--fade-in-effect: fadeIn 1s;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
@@ -164,11 +132,6 @@ a {
 	color: var(--menu-color);
 	z-index: 2;
 	border-radius: 0;
-}
-
-.tab__container button:hover,
-.tab__container button.active {
-	/* letter-spacing: 0.5ch; */
 }
 
 .tabcontent {
@@ -295,36 +258,50 @@ input[type='checkbox']:checked:hover {
 	position: relative;
 }
 
-.project--spotlight:hover #marquee p {
-	color: var(--link-color);
-}
-
 .project--spotlight a {
 	display: grid;
 	grid-template-columns: repeat(2, 50%);
 }
 
-#marquee {
-	display: flex;
-	flex-direction: row;
-	left: 0;
+.marquee {
+	left: -70%;
+	top: 0.25rem;
 	position: absolute;
-	animation: marquee 40s infinite linear;
 	z-index: 100;
-	bottom: 0.25rem;
-	width: 300px;
-	justify-content: center;
+	width: 140vw;
+	animation: marquee 34s infinite linear;
 }
 
-#marquee p {
-	padding: 0 1rem;
-	height: fit-content;
+.marquee-offset {
+	left: -70%;
+	top: 0.25rem;
+	position: absolute;
+	z-index: 100;
+	width: 140vw;
+	animation: marquee 34s infinite linear;
+	animation-delay: 17s;
+}
+
+.marquee p,
+.marquee-offset p {
 	margin: 0;
-	color: var(--divider-color);
+	line-height: 1;
 	letter-spacing: -0.85px;
-	font-size: 1rem;
+	font-size: 6rem;
+	color: #ffffff00;
+	-webkit-text-stroke: 1px var(--divider-color);
+	word-break: keep-all;
+}
+
+.thumbnail .marquee p,
+.thumbnail .marquee-offset p {
 	font-family: var(--menu-font);
-	text-transform: uppercase;
+}
+
+.project--spotlight:hover .marquee p, .project--spotlight:hover .marquee-offset p {
+	-webkit-text-stroke: 1px var(--link-color);
+	color: #ffffff00;
+	transition: linear 0.125s;
 }
 
 .project--spotlight .img__container {
@@ -370,10 +347,6 @@ input[type='checkbox']:checked:hover {
 
 .thumbnail:hover .item--line {
 	border-color: #ffffff00;
-}
-
-.thumbnail:hover img {
-	/* border-radius: 1rem; */
 }
 
 .thumbnail .project--category {
