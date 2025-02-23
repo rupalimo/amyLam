@@ -17,9 +17,9 @@
 	--filter-font: 'Fahk', sans-serif;
 	--category-font: 'VG500', monospace;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
---text-color: #020101;
+--menu-color: #4d4c5b;
   --divider-color: #83ff60;
-  --menu-color: #020101;
+--text-color: #4d4c5b;
   --menubk-color: #ffffff;
   --link-color: #0010ff;
   --disabled-color: #8c9292;
