@@ -23,10 +23,10 @@
 	0% {
 		left: 100%;
 	}
- 50% {
-	left: -10%;
- }
-100% {
+	50% {
+		left: -10%;
+	}
+	100% {
 		left: -120%;
 	}
 }
@@ -39,8 +39,8 @@
 	--category-font: 'VG500', monospace;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
 	--text-color: #4d4c5b;
-	--divider-color:  #beffa3;
-	--menu-color:#4d4c5b;
+	--divider-color: #beffa3;
+	--menu-color: #4d4c5b;
 	--menubk-color: #ffffff;
 	--link-color: #5100ff;
 	--disabled-color: #8c9292;
@@ -265,12 +265,12 @@ input[type='checkbox']:checked:hover {
 	text-decoration: none;
 }
 
-.project--spotlight {
+.spotlight__container {
 	margin-bottom: 1rem;
 	position: relative;
 }
 
-.project--spotlight a {
+.spotlight__container a {
 	display: grid;
 	grid-template-columns: repeat(2, 50%);
 }
@@ -310,13 +310,19 @@ input[type='checkbox']:checked:hover {
 	font-family: var(--menu-font);
 }
 
-.project--spotlight:hover .marquee p, .project--spotlight:hover .marquee-offset p {
+.spotlight__container:hover .marquee p,
+.spotlight__container:hover .marquee-offset p {
 	-webkit-text-stroke: 1px var(--link-color);
 	color: #ffffff00;
 	transition: linear 0.125s;
 }
 
-.project--spotlight .img__container {
+.spotlight__container .spotlight__info h4 {
+	font-size: 2.5rem;
+	margin: 0;
+}
+
+.spotlight__container .img__container {
 	max-height: 500px;
 	grid-column: 1/2;
 	margin-right: 2rem;
@@ -325,16 +331,16 @@ input[type='checkbox']:checked:hover {
 	justify-content: center;
 }
 
-.project--spotlight .img__container img {
+.spotlight__container .img__container img {
 	width: 100%;
 	height: auto;
 }
 
-.project--spotlight .img__container .mobile--show {
+.spotlight__container .img__container .mobile--show {
 	display: none;
 }
 
-.project--spotlight .spotlight--tag {
+.spotlight__container .spotlight--tag {
 	width: 150px;
 }
 
@@ -690,13 +696,17 @@ footer {
 	.marquee-offset {
 		display: none;
 	}
-	
-	.project--spotlight a {
+
+	.spotlight__container a {
 		grid-template-rows: 1fr auto;
 		grid-template-columns: 1fr;
 	}
 
-	.project--spotlight .img__container {
+		.spotlight__container .spotlight__info h4 {
+		margin: 1rem 0 0.75rem 0;
+	}
+
+	.spotlight__container .img__container {
 		grid-column: 1;
 		grid-row: 1;
 		margin-right: 0;
@@ -717,22 +727,29 @@ footer {
 	/* LANDING PAGE STYLING */
 
 	.marquee {
-	left: -100%;
-	top: 0.25rem;
-	position: absolute;
-	z-index: 100;
-	animation: marquee--mobile 20s infinite linear;
-}
+		left: -100%;
+		top: 0.25rem;
+		position: absolute;
+		z-index: 100;
+		animation: marquee--mobile 20s infinite linear;
+	}
 
 	.marquee p {
 		font-size: 4rem;
 	}
 
-	.project--spotlight .img__container .mobile--show {
+	.spotlight__container .spotlight__info h4 {
+	font-weight: normal;
+  font-size: 1.25rem;
+  margin: 1rem 0;
+  line-height: 1;
+	}
+
+	.spotlight__container .img__container .mobile--show {
 		display: block;
 	}
 
-	.project--spotlight .img__container .mobile--hide {
+	.spotlight__container .img__container .mobile--hide {
 		display: none;
 	}
 
