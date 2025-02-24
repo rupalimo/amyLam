@@ -503,6 +503,10 @@ input[type='checkbox']:checked:hover {
 	display: none;
 }
 
+#past .newsItem--year {
+	padding-bottom: 1.5rem;
+}
+
 .news__tabs,
 .press__tabs {
 	display: flex;
@@ -544,7 +548,14 @@ news--tab:hover {
 .pressItem__container article {
 	display: grid;
 	grid-template-columns: 50% 50%;
-	margin: 0rem 1rem 3rem 1rem;
+}
+
+.newsItem__container {
+	margin: 0 1rem 2rem 1rem;
+}
+
+.newsItem__container + .newsItem__container {
+	margin-top: 1.5rem;
 }
 
 .newsItem__container p {
@@ -567,10 +578,7 @@ news--tab:hover {
 .newsItem--year,
 .pressItem--year {
 	color: var(--text-color);
-}
-
-.newsItem--year:first-child {
-	margin: 0 0 1rem 0;
+		margin: 0;
 }
 
 .newsItem--year:not(:first-child) {
