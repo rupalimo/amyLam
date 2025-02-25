@@ -463,23 +463,21 @@ input[type='checkbox']:checked:hover {
 }
 
 .para__about .text--contact {
-	font-family: var(--menu-font);
-	font-size: 1.25rem;
-	color: var(--disabled-color);
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
+font-family: var(--menu-font);
+  font-size: 1.25rem;
+  color: var(--disabled-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
 }
 
 .text--contact .button {
-	width: 25%;
-	min-width: fit-content;
-	padding: 0.25rem 4rem 0.3rem 4rem;
-	display: block;
-	align-content: center;
+margin: 0 auto;
+  width: 33.33%;
+  display: block;
+  padding: 0.25rem;
+  align-content: center;
 }
 
 .text--disabled {
@@ -719,6 +717,8 @@ footer {
 		overflow: visible;
 		display: block;
 	}
+
+
 }
 
 @media (max-width: 780px) {
@@ -820,14 +820,9 @@ footer {
 		display: block;
 	}
 
-	.text--contact .button {
+		.text--contact .button {
 		width: 100%;
 	}
-
-	.text--contact .button:nth-of-type(even) {
-		border-style: none solid;
-	}
-
 	.para__about figure {
 		min-width: 260px;
 		float: none;
