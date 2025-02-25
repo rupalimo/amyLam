@@ -38,12 +38,15 @@
 	--filter-font: 'Fahk', sans-serif;
 	--category-font: 'VG500', monospace;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
---text-color: #4d4c5b;
-  --accent-color: #ae17ff;
-  --menu-color: #4d4c5b;
-  --divider-color: #ececec;
-  --link-color: #14d7ce;
-  --disabled-color: #8c9292;
+	--text-color: #4d4c5b;
+	/* --accent-color: #ae17ff; */
+	--accent-color: #4501ff;
+	--menu-color: #4d4c5b;
+	--divider-color: #ececec;
+	--link-color: #6b4600;
+	--disabled-color: #8c9292;
+	--buttonbk: #eef0f6;
+	--button-gradient: #1c2aff;
 	--fade-in-effect: fadeIn 1s;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
 	font-size: 16px;
@@ -94,15 +97,21 @@ a {
 .button {
 	padding: 0.25rem;
 	text-decoration: none;
-	border: 1px var(--accent-color);
-	border-style: dotted solid;
 	text-align: center;
+	box-shadow: var(--button-gradient) 0px 0px 6px 2px inset,
+		rgba(255, 230, 243, 0.33) 0px -3px 3px 0px inset,
+		rgba(255, 230, 243, 0.1) 0px 0px 12px 2px inset;
+	background: var(--buttonbk);
 }
 
 .button:hover {
-	background: var(--divider-color);
+	box-shadow: var(--button-gradient) 0px 0px 8px 4px inset,
+		rgba(255, 230, 243, 0.33) 0px -3px 3px 0px inset,
+		rgba(255, 230, 243, 0.1) 0px 0px 12px 2px inset;
+	/* color:var(--button-gradient); */
 	transition: linear 0.125s;
 	cursor: pointer;
+	background: var(--buttonbk);
 }
 
 /* TOP MENU STYLING */
@@ -274,7 +283,6 @@ input[type='checkbox']:checked:hover {
 	grid-template-columns: repeat(2, 50%);
 }
 
-
 .spotlight__tag {
 	font-size: 2.5em;
 	display: flex;
@@ -292,7 +300,7 @@ input[type='checkbox']:checked:hover {
 	font-family: var(--menu-font);
 	font-weight: bold;
 	text-transform: uppercase;
-color: white;
+	color: white;
 	-webkit-text-stroke: 1px var(--text-color);
 	letter-spacing: -0.85px;
 }
@@ -462,13 +470,15 @@ color: white;
 	padding: 0;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .text--contact .button {
-	margin: 0 auto;
-	width: 33.33%;
+	width: 25%;
+	min-width: fit-content;
+	padding: 0.25rem 4rem;
 	display: block;
-	padding: 0.25rem;
 	align-content: center;
 }
 
@@ -500,15 +510,19 @@ color: white;
 }
 
 .news--tab {
-	color: var(--link-color);
+	color: #ab99a1;
 }
 
 .news--tab,
 .press--tab {
 	font-family: var(--menu-font);
 	font-size: 1.25rem;
-	background: #fff;
 	width: 10vw;
+	color: var(--link-color);
+	text-align: center;
+	text-decoration: none;
+	background: var(--buttonbk);
+	border: none;
 }
 
 .news--tab {
@@ -517,7 +531,6 @@ color: white;
 
 news--tab:hover {
 	cursor: pointer;
-	
 }
 
 .press--tab {
@@ -525,8 +538,13 @@ news--tab:hover {
 }
 
 .on {
-	color: var(--link-color);
-	background: var(--divider-color);
+	color: var(--buttonbk);
+	background: var(--button-gradient);
+}
+
+.on:hover {
+	color: var(--buttonbk);
+	background: var(--button-gradient);
 }
 
 .newsItem__container,
@@ -563,7 +581,7 @@ news--tab:hover {
 .newsItem--year,
 .pressItem--year {
 	color: var(--text-color);
-		margin: 0;
+	margin: 0;
 }
 
 .newsItem--year:not(:first-child) {
@@ -631,12 +649,12 @@ a.pressItem--description {
 }
 
 /* press section */
-
+/* 
 .press--tab {
 	text-align: center;
 	text-decoration: none;
 	color: var(--link-color);
-}
+} */
 
 .para__press {
 	width: 100%;
@@ -665,7 +683,7 @@ footer {
 	left: 0;
 	height: 0.5rem;
 	width: 100%;
-background: #fff;
+	background: #fff;
 	z-index: 1;
 	padding: 0 0.5rem;
 }
@@ -689,7 +707,7 @@ background: #fff;
 		grid-template-columns: 1fr;
 	}
 
-		.spotlight__container .spotlight__info h4 {
+	.spotlight__container .spotlight__info h4 {
 		margin: 1rem 0 0.75rem 0;
 	}
 
@@ -729,10 +747,10 @@ background: #fff;
 	}
 
 	.spotlight__container .spotlight__info h4 {
-	font-weight: normal;
-  font-size: 1.25rem;
-  margin: 1rem 0;
-  line-height: 1;
+		font-weight: normal;
+		font-size: 1.25rem;
+		margin: 1rem 0;
+		line-height: 1;
 	}
 
 	.spotlight__container .img__container .mobile--show {
@@ -750,7 +768,7 @@ background: #fff;
 	.project--item,
 	.thumbnail {
 		border-style: none solid solid solid;
-		border-right: 1px solid var(--divider-color);	
+		border-right: 1px solid var(--divider-color);
 		border-bottom: 1px solid var(--divider-color);
 	}
 
@@ -769,7 +787,8 @@ background: #fff;
 		display: block;
 	}
 
-	.pressItem__container article,  .newsItem__container {
+	.pressItem__container article,
+	.newsItem__container {
 		margin: 1rem 0 3rem 0;
 	}
 
