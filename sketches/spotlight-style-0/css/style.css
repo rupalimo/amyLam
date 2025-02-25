@@ -733,7 +733,6 @@ background: #fff;
 
 	.marquee {
 		left: -100%;
-		top: 0.25rem;
 		position: absolute;
 		z-index: 100;
 		animation: marquee--mobile 20s infinite linear;
@@ -867,5 +866,17 @@ background: #fff;
 
 	.press--tab {
 		min-width: 226px;
+	}
+
+	.marquee {
+position: relative;
+    animation: none;
+    left: 0;
+}
+
+	.marquee p {
+		font-size: 3rem;
+-webkit-text-stroke: 1px var(--text-color);
+margin: 0.5rem 0;
 	}
 }
