@@ -38,15 +38,14 @@
 	--filter-font: 'Fahk', sans-serif;
 	--category-font: 'VG500', monospace;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
-	--text-color: #4d4c5b;
-	/* --accent-color: #ae17ff; */
-	--accent-color: #4501ff;
-	--menu-color: #4d4c5b;
+	--text-color: #38383c;
+	--menu-color: #38383c;
 	--divider-color: #ececec;
-	--link-color: #6b4600;
-	--disabled-color: #8c9292;
-	--buttonbk: #eef0f6;
-	--button-gradient: #1c2aff;
+--link-color: #007b19;
+  --disabled-color: #8c9292;
+  --buttonbk: #eef0f6;
+  --button-gradient: #d298f9;
+	--accent-color: #c65ef6;
 	--fade-in-effect: fadeIn 1s;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
 	font-size: 16px;
@@ -95,6 +94,7 @@ a {
 }
 
 .button {
+	color: var(--text-color);
 	padding: 0.25rem;
 	text-decoration: none;
 	text-align: center;
@@ -126,7 +126,7 @@ a {
 
 .tab__container button {
 	border: 1px var(--menu-color);
-	border-style: solid solid none solid;
+	border-style: dotted dotted none dotted;
 	color: var(--menu-color);
 	background: #fff;
 	outline: none;
@@ -343,13 +343,13 @@ input[type='checkbox']:checked:hover {
 
 .thumbnail:hover {
 	border-style: none none solid solid;
-	border-color: var(--link-color);
+	border-color: var(--accent-color);
 }
 
 .thumbnail:hover a,
 .thumbnail:hover .project--category {
-	color: var(--link-color);
-	border-color: var(--link-color);
+	color: var(--accent-color);
+	border-color: var(--accent-color);
 }
 
 .thumbnail:hover .item--line {
@@ -357,7 +357,7 @@ input[type='checkbox']:checked:hover {
 }
 
 .thumbnail:hover .spotlight__tag .spotlight--header {
-	-webkit-text-stroke: 1px var(--link-color);
+	-webkit-text-stroke: 1px var(--accent-color);
 }
 
 .thumbnail .project--category {
@@ -477,7 +477,7 @@ input[type='checkbox']:checked:hover {
 .text--contact .button {
 	width: 25%;
 	min-width: fit-content;
-	padding: 0.25rem 4rem;
+	padding: 0.25rem 4rem 0.3rem 4rem;
 	display: block;
 	align-content: center;
 }
@@ -509,16 +509,12 @@ input[type='checkbox']:checked:hover {
 	justify-content: center;
 }
 
-.news--tab {
-	color: #ab99a1;
-}
-
 .news--tab,
 .press--tab {
 	font-family: var(--menu-font);
 	font-size: 1.25rem;
 	width: 10vw;
-	color: var(--link-color);
+	color: var(--text-color);
 	text-align: center;
 	text-decoration: none;
 	background: var(--buttonbk);
@@ -538,13 +534,17 @@ news--tab:hover {
 }
 
 .on {
-	color: var(--buttonbk);
-	background: var(--button-gradient);
+color: var(--buttonbk);
+  background: var(--button-gradient);
+  box-shadow: var(--buttonbk) 0px 0px 1px 1px inset, rgba(255, 230, 243, 0.33) 0px -3px 3px 0px inset, rgba(255, 230, 243, 0.1) 0px 0px 12px 2px inset;
+  border: 1px solid var(--button-gradient);
 }
 
 .on:hover {
-	color: var(--buttonbk);
-	background: var(--button-gradient);
+color: var(--buttonbk);
+  background: var(--button-gradient);
+  box-shadow: var(--buttonbk) 0px 0px 1px 1px inset, rgba(255, 230, 243, 0.33) 0px -3px 3px 0px inset, rgba(255, 230, 243, 0.1) 0px 0px 12px 2px inset;
+  border: 1px solid var(--button-gradient);
 }
 
 .newsItem__container,
@@ -690,7 +690,7 @@ footer {
 
 .footer-boundary {
 	border: 1px var(--menu-color);
-	border-style: none solid solid solid;
+	border-style: none dotted dotted dotted;
 }
 
 @media (max-width: 1240px) {

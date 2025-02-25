@@ -31,11 +31,11 @@
 	--filter-font: 'Fahk', sans-serif;
 	--category-font: 'VG500', monospace;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
---text-color: #4d4c5b;
-  --divider-color: #ae17ff;
-  --menu-color: #4d4c5b;
+--text-color: #38383c;
+  --divider-color: #c65ef6;
+  --menu-color: #38383c;
   --menubk-color: #ececec;
-  --link-color: #14d7ce;
+  --link-color:  #007b19;
   --disabled-color: #8c9292;
 	--fade-in-effect: fadeIn 1s;
 	font-size: 16px;
