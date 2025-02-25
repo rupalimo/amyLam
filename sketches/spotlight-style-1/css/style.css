@@ -39,13 +39,13 @@
 	--category-font: 'VG500', monospace;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
 	--text-color: #38383c;
-	--menu-color: #38383c;
-	--divider-color: #ececec;
---link-color: #007b19;
+  --menu-color: #38383c;
+  --divider-color: #ececec;
+  --link-color: #6e39ff;
   --disabled-color: #8c9292;
   --buttonbk: #eef0f6;
-  --button-gradient: #d298f9;
-	--accent-color: #c65ef6;
+  --button-gradient: #5eec52;
+  --accent-color: #5eec52;
 	--fade-in-effect: fadeIn 1s;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
 	font-size: 16px;
@@ -343,7 +343,7 @@ input[type='checkbox']:checked:hover {
 
 .thumbnail:hover {
 	border-style: none none solid solid;
-	border-color: var(--accent-color);
+	border-color: var(--button-gradient);
 }
 
 .thumbnail:hover a,
