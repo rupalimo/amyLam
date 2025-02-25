@@ -861,11 +861,11 @@ background: #fff;
 	}
 
 	.news--tab {
-		min-width: 113px;
+		min-width: 50%;
 	}
 
 	.press--tab {
-		min-width: 226px;
+		min-width: 100%;
 	}
 
 	.marquee {

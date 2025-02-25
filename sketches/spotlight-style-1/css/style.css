@@ -834,6 +834,13 @@ footer {
 		float: none;
 		padding: 1rem 0;
 	}
+	.news--tab {
+		min-width: 25%;
+	}
+
+	.press--tab {
+		min-width: 50%;
+	}
 }
 
 @media (max-width: 640px) {
@@ -866,11 +873,12 @@ footer {
 		font-size: 9px;
 	}
 
-	.news--tab {
-		min-width: 113px;
+		.news--tab {
+		min-width: 50%;
 	}
 
 	.press--tab {
-		min-width: 226px;
+		min-width: 100%;
 	}
+
 }
