@@ -130,9 +130,7 @@ a {
 }
 
 .project__scroll .inline-bold {
-	font-weight: bold;
 	padding: 0 2px 1px 4px;
-
 	background: var(--divider-color);
 }
 
@@ -307,6 +305,33 @@ figcaption a {
 	width: 100%;
 }
 
+.project-blurb {
+	width: 60%;
+  text-align: justify;
+	padding: 1rem;
+}
+
+.project-blurb:nth-of-type(even) {
+	  margin: 0rem auto 0rem 0;
+}
+
+
+.project-blurb:nth-of-type(odd) {
+  margin: 0rem 0 0rem auto;
+}
+
+.project-blurb p {
+	margin: 0;
+}
+
+.project-blurb p:first-of-type {
+font-style: italic;
+}
+
+.project-blurb p + p {
+	margin-top: 0.25rem;
+}
+
 .book-launch {
 	font-family: var(--body-font);
 	padding: 1rem;
@@ -329,11 +354,11 @@ figcaption a {
 
 	text-align: center;
 }
-
+/* 
 .book-launch li::before {
 	content: '‣';
 	margin-right: 0.5rem;
-}
+} */
 
 .book-launch a {
 	text-decoration: underline;

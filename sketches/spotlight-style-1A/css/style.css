@@ -126,7 +126,7 @@ a {
 
 .tab__container button {
 	border: 1px var(--menu-color);
-	border-style: dotted dotted none dotted;
+	border-style: solid solid none solid;
 	color: var(--menu-color);
 	background: #fff;
 	outline: none;
@@ -692,7 +692,7 @@ footer {
 
 .footer-boundary {
 	border: 1px var(--menu-color);
-	border-style: none dotted dotted dotted;
+	border-style: none solid solid solid;
 }
 
 @media (max-width: 1240px) {
