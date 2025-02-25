@@ -17,7 +17,7 @@
 	--category-font: 'VG500', monospace;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
 	--text-color: #4d4c5b;
-	--accent-color:#30ffff;
+	--accent-color: #30ffff;
 	--menu-color: #4d4c5b;
 	--divider-color: #ececec;
 	--link-color: #0800ff;
@@ -87,8 +87,8 @@ a {
 	cursor: pointer;
 }
 
-
-.button:hover, .on {
+.button:hover,
+.on {
 	box-shadow: var(--divider-color) 0 0 12px 2px inset;
 }
 
@@ -266,14 +266,12 @@ input[type='checkbox']:checked:hover {
 }
 
 .marquee p {
-	/* animation: spotlight-gradient 4s ease-in-out infinite; */
 	margin: 0.5rem 0;
 	font-size: 3rem;
 	color: #ffffff00;
 	-webkit-text-stroke: 1px var(--text-color);
 	word-break: keep-all;
 	text-transform: capitalize;
-	text-decoration: underline;
 }
 
 .thumbnail .marquee p {
@@ -686,6 +684,7 @@ footer {
 	.text--contact .button {
 		width: 100%;
 		margin-top: -1px;
+		padding: 0.25rem 1rem 0.3rem 1rem;
 	}
 }
 
@@ -708,7 +707,7 @@ footer {
 
 	/* LANDING PAGE STYLING */
 	.marquee p {
-		margin-bottom: 0;
+		margin: 1rem 0 0 0;
 	}
 
 	.spotlight__container .spotlight__info h4 {
@@ -780,6 +779,12 @@ footer {
 	.newsItem--category {
 		margin: 2px 0;
 	}
+	.news--tab, .press--tab {
+		width: 50%;
+	}
+.press--tab {
+		width: 100%;
+	}
 }
 
 @media (max-width: 640px) {
@@ -810,13 +815,5 @@ footer {
 
 	.para__about figure figcaption {
 		font-size: 9px;
-	}
-
-	.news--tab {
-		min-width: 113px;
-	}
-
-	.press--tab {
-		min-width: 226px;
 	}
 }
