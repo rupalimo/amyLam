@@ -229,7 +229,7 @@ input[type='checkbox'] + label {
 }
 
 input[type='checkbox']:checked + label {
-		color: var(--link-color);
+	color: var(--link-color);
 }
 
 input[type='checkbox']:hover {
@@ -281,7 +281,6 @@ input[type='checkbox']:checked:hover {
 	display: grid;
 	grid-template-columns: repeat(2, 50%);
 }
-
 
 .marquee {
 	left: -70%;
@@ -746,7 +745,6 @@ footer {
 
 	.marquee {
 		left: -100%;
-		top: 0.25rem;
 		position: absolute;
 		z-index: 100;
 		animation: marquee--mobile 20s infinite linear;
@@ -884,4 +882,8 @@ footer {
 	.press--tab {
 		min-width: 100%;
 	}
+	.marquee {
+display: none;
+	}
+
 }
