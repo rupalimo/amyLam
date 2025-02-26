@@ -226,7 +226,7 @@ input[type='checkbox']:checked {
 
 input[type='checkbox'] + label {
 	color: var(--disabled-color);
-	letter-spacing: 0.030ch;
+	letter-spacing: 0.03ch;
 	/* font-weight: bold; */
 }
 
@@ -235,7 +235,6 @@ input[type='checkbox']:checked + label {
 	/* letter-spacing: 0.1ch; */
 	letter-spacing: 0;
 	font-weight: bold;
-
 }
 
 input[type='checkbox']:hover {
@@ -367,7 +366,8 @@ input[type='checkbox']:checked:hover {
 }
 
 .thumbnail:hover,
-.project--item:hover, .project--item:nth-of-type(4n + 2):hover {
+.project--item:hover,
+.project--item:nth-of-type(4n + 2):hover {
 	border-bottom: 1px solid var(--link-color);
 	border-left: 1px solid var(--link-color);
 }
@@ -788,7 +788,7 @@ footer {
 	.project--item {
 		width: 100%;
 	}
-
+	/* 
 	.project--item,
 	.thumbnail {
 		border-style: none solid solid solid;
@@ -799,6 +799,25 @@ footer {
 	.project--item:hover,
 	.thumbnail:hover {
 		border-style: none solid solid solid;
+	} */
+
+	.project--item,
+	.thumbnail {
+		border-style: none solid solid solid;
+		border-right: 1px solid var(--divider-color);
+		border-bottom: 1px solid var(--divider-color);
+	}
+
+	.project--item:nth-of-type(4n + 2) {
+		border-left: 1px solid var(--divider-color);
+	}
+
+	.project--item:hover,
+	.thumbnail:hover,
+	.project--item:nth-of-type(4n + 2):hover {
+		border-style: none solid solid solid;
+		border-left: 1px solid var(--link-color);
+		border-right: 1px solid var(--link-color);
 	}
 
 	.para__project p {
