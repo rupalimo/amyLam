@@ -215,7 +215,7 @@ input[type='checkbox'] {
 
 /* Checked state */
 input[type='checkbox']:checked {
-	border-color: var(--text-color);
+	border-color: black;
 	position: relative;
 	background: url('../cross.svg') no-repeat center;
 	background-size: contain;
