@@ -806,6 +806,7 @@ footer {
 		border-style: none solid solid solid;
 		border-right: 1px solid var(--divider-color);
 		border-bottom: 1px solid var(--divider-color);
+			border-left: 1px solid var(--divider-color);
 	}
 
 	.project--item:nth-of-type(4n + 2) {
@@ -818,6 +819,7 @@ footer {
 		border-style: none solid solid solid;
 		border-left: 1px solid var(--link-color);
 		border-right: 1px solid var(--link-color);
+		
 	}
 
 	.para__project p {
