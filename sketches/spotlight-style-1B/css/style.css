@@ -192,36 +192,36 @@ a {
 }
 
 label {
-	margin-left: 0.125rem;
+	margin-left: 0.25rem;
 	font-size: 1.75rem;
 	line-height: 1.25;
 	font-family: var(--filter-font);
 }
 
-input[type='checkbox'] {
+input[type='checkbox'],
+input[type='checkbox']:checked {
 	appearance: none; /* For modern browsers */
 	-webkit-appearance: none; /* Safari */
 	-moz-appearance: none; /* Firefox */
-	background-color: white;
-	border: 1px solid var(--disabled-color);
-	width: 16px;
-	height: 16px;
+	width: 20px;
+	height: 20px;
 	cursor: pointer;
 	display: inline-block;
 	vertical-align: middle;
-	margin-right: 0.125rem;
 	border-radius: 0;
+	margin: 0 0 3px 0.25rem;
+	position: relative;
 }
 
-/* Checked state */
+input[type='checkbox'] {
+	border: 1px solid var(--disabled-color);
+}
+
 input[type='checkbox']:checked {
-	border-color: var(--link-color);
 	position: relative;
-	background: url('../cross.svg') no-repeat center;
+	background: url('../cross1.svg') no-repeat center;
 	background-size: contain;
-	width: 16px;
-	height: 16px;
-	cursor: pointer;
+	border: 1px solid var(--button-gradient);
 }
 
 input[type='checkbox'] + label {
@@ -229,11 +229,11 @@ input[type='checkbox'] + label {
 }
 
 input[type='checkbox']:checked + label {
-	color: var(--link-color);
+	color: var(--accent-color);
 }
 
 input[type='checkbox']:hover {
-	box-shadow: var(--disabled-color) 0 0 1px 1px inset;
+	box-shadow: var(--buttonbk) 0 0 4px 2px inset;
 	cursor: pointer;
 }
 
@@ -246,7 +246,7 @@ label:hover input[type='checkbox'] {
 }
 
 input[type='checkbox']:checked:hover {
-	box-shadow: var(--text-color) 0 0 1px 1px inset;
+	box-shadow: var(--accent-color) 0 0 1px 1px inset;
 	cursor: pointer;
 }
 
@@ -275,7 +275,7 @@ input[type='checkbox']:checked:hover {
 .spotlight__container {
 	margin-bottom: 1rem;
 	position: relative;
-		border-bottom: 1px solid var(--divider-color);
+	border-bottom: 1px solid var(--divider-color);
 	border-left: 1px solid #fff;
 	border-right: 1px solid #fff;
 }
@@ -322,9 +322,10 @@ input[type='checkbox']:checked:hover {
 
 .spotlight__container:hover .marquee p,
 .spotlight__container:hover .marquee-offset p {
-	-webkit-text-stroke: 1px var(--accent-color);
-	color: #ffffff00;
+	-webkit-text-stroke: 1px var(--buttonbk);
+	color: var(--buttonbk);
 	transition: linear 0.025s;
+	filter: blur(3px);
 }
 
 .spotlight__container .spotlight__info h4 {
@@ -361,9 +362,10 @@ input[type='checkbox']:checked:hover {
 }
 
 .thumbnail:hover,
-.project--item:hover, .project--item:nth-of-type(4n + 2):hover {
-	border-bottom: 1px dotted var(--text-color);
-	border-left: 1px dotted var(--text-color);
+.project--item:hover,
+.project--item:nth-of-type(4n + 2):hover {
+	border-bottom: 1px solid var(--accent-color);
+	border-left: 1px solid var(--accent-color);
 }
 
 .thumbnail .project--category {
@@ -388,7 +390,7 @@ input[type='checkbox']:checked:hover {
 }
 
 .project--item {
-border-bottom: 1px solid #fff;
+	border-bottom: 1px solid #fff;
 	border-left: 1px solid var(--divider-color);
 	border-right: 1px solid #fff;
 	border-top: none;
@@ -704,6 +706,14 @@ footer {
 		width: 33.3%;
 	}
 
+	.project--item:nth-of-type(4n + 2) {
+		border-left: 1px solid var(--divider-color);
+	}
+
+	.project--item:nth-of-type(3n + 2) {
+		border-left: 1px solid #fff;
+	}
+
 	.marquee-offset {
 		display: none;
 	}
@@ -775,22 +785,23 @@ footer {
 	}
 
 	.project--item,
-	.thumbnail  {
+	.thumbnail {
 		border-style: none solid solid solid;
 		border-right: 1px solid var(--divider-color);
 		border-bottom: 1px solid var(--divider-color);
 		border-left: 1px solid var(--divider-color);
 	}
 
-.project--item:nth-of-type(4n + 2) {
-	border-left: 1px solid var(--divider-color);
-}
+	.project--item:nth-of-type(3n + 2) {
+		border-left: 1px solid var(--divider-color);
+	}
 
 	.project--item:hover,
-	.thumbnail:hover, .project--item:nth-of-type(4n + 2):hover {
-		border-style: none dotted dotted dotted;
-		border-left: 1px dotted var(--text-color);
-		border-right: 1px dotted var(--text-color);
+	.thumbnail:hover,
+	.project--item:nth-of-type(3n + 2):hover {
+		border-style: none solid solid solid;
+		border-left: 1px solid var(--accent-color);
+		border-right: 1px solid var(--accent-color);
 	}
 
 	.para__project p {
@@ -842,7 +853,7 @@ footer {
 	.para__about figure {
 		min-width: 260px;
 		float: none;
-		padding: 1rem 0;
+		padding: 1rem 0 0 0;
 	}
 	.news--tab {
 		min-width: 25%;
@@ -891,7 +902,6 @@ footer {
 		min-width: 100%;
 	}
 	.marquee {
-display: none;
+		display: none;
 	}
-
 }
