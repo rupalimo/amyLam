@@ -147,6 +147,12 @@ a {
 .para__press,
 .para__about {
 	display: inline-block;
+}
+
+.para__project,
+.para__news,
+.para__press,
+.para__about, label {
 	font-size: 1.75rem;
 	line-height: 1.25;
 	font-family: var(--filter-font);
@@ -173,12 +179,6 @@ a {
 
 .para__project p + p {
 	margin-top: 0.75rem;
-}
-
-label {
-	font-size: 1.75rem;
-	line-height: 1.25;
-	font-family: var(--filter-font);
 }
 
 input[type='checkbox'],
@@ -211,13 +211,10 @@ input[type='checkbox']:checked {
 
 input[type='checkbox'] + label {
 	color: var(--disabled-color);
-	letter-spacing: 0.03ch;
 }
 
 input[type='checkbox']:checked + label {
 	color: var(--link-color);
-	letter-spacing: 0.0025ch;
-	font-weight: bold;
 }
 
 input[type='checkbox']:hover {
