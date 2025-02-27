@@ -241,7 +241,7 @@ input[type='checkbox'] + label {
 
 input[type='checkbox']:checked + label {
 	color: var(--link-color);
-	letter-spacing: 0;
+		letter-spacing: 0.0025ch;
 	font-weight: bold;
 }
 
