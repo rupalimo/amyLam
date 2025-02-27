@@ -43,7 +43,7 @@
 }
 
 ::selection {
-	background-color: var(--disabled-color);
+	background-color: var(--buttonbk);
 }
 
 html,
