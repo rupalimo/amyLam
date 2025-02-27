@@ -491,6 +491,10 @@ footer {
 		text-align: left;
 		color: var(--disabled-color);
 	}
+
+	.project-blurb {
+		width: 80%;
+	}
 }
 
 @media (max-width: 640px) {

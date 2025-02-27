@@ -366,8 +366,10 @@ input[type='checkbox']:checked:hover {
 .thumbnail:hover,
 .project--item:hover,
 .project--item:nth-of-type(4n + 2):hover {
-	border-bottom: 1px solid var(--link-color);
+	border-bottom: 1px dotted var(--link-color);
 	border-left: 1px solid var(--link-color);
+	padding: 0 1.5rem 1.5rem 1.5rem;
+		transition: linear 0.125s;
 }
 
 .thumbnail:hover .item--line {
@@ -794,18 +796,6 @@ footer {
 	.project--item {
 		width: 100%;
 	}
-	/* 
-	.project--item,
-	.thumbnail {
-		border-style: none solid solid solid;
-		border-right: 1px solid var(--divider-color);
-		border-bottom: 1px solid var(--divider-color);
-	}
-
-	.project--item:hover,
-	.thumbnail:hover {
-		border-style: none solid solid solid;
-	} */
 
 	.project--item,
 	.thumbnail {
@@ -825,7 +815,7 @@ footer {
 		border-style: none solid solid solid;
 		border-left: 1px solid var(--link-color);
 		border-right: 1px solid var(--link-color);
-		
+		padding: 0 2rem 2rem 2rem;
 	}
 
 	.para__project p {
@@ -906,8 +896,11 @@ footer {
 		padding: 1rem 0 1.5rem 0;
 	}
 
-	.thumbnail {
-		padding: 0 1rem 2rem 1em;
+
+	.thumbnail, .project--item:hover,
+	.thumbnail:hover,
+	.project--item:nth-of-type(3n + 2):hover {
+			padding: 0 1rem 2rem 1em;
 	}
 
 	.tabitems {

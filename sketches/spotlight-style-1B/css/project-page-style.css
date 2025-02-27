@@ -31,12 +31,12 @@
 	--filter-font: 'Fahk', sans-serif;
 	--category-font: 'VG500', monospace;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
---text-color: #38383c;
-  --divider-color: #5eec52;
-  --menu-color: #38383c;
-  --menubk-color: #ececec;
-  --link-color:  #6e39ff;
-  --disabled-color: #8c9292;
+	--text-color: #38383c;
+	--divider-color: #5eec52;
+	--menu-color: #38383c;
+	--menubk-color: #ececec;
+	--link-color: #6e39ff;
+	--disabled-color: #8c9292;
 	--fade-in-effect: fadeIn 1s;
 	font-size: 16px;
 	font-family: var(--body-font);
@@ -307,17 +307,16 @@ figcaption a {
 
 .project-blurb {
 	width: 60%;
-  text-align: justify;
+	text-align: justify;
 	padding: 1rem;
 }
 
 .project-blurb:nth-of-type(even) {
-	  margin: 0rem auto 0rem 0;
+	margin: 0rem auto 0rem 0;
 }
 
-
 .project-blurb:nth-of-type(odd) {
-  margin: 0rem 0 0rem auto;
+	margin: 0rem 0 0rem auto;
 }
 
 .project-blurb p {
@@ -325,7 +324,7 @@ figcaption a {
 }
 
 .project-blurb p:first-of-type {
-font-style: italic;
+	font-style: italic;
 }
 
 .project-blurb p + p {
@@ -490,6 +489,10 @@ footer {
 		font-size: 9px;
 		text-align: left;
 		color: var(--disabled-color);
+	}
+
+	.project-blurb {
+		width: 80%;
 	}
 }
 
