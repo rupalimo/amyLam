@@ -368,7 +368,7 @@ input[type='checkbox']:checked:hover {
 .project--item:nth-of-type(4n + 2):hover {
 	border-bottom: 1px dotted var(--link-color);
 	border-left: 1px solid var(--link-color);
-	padding: 0 1.5rem 1.5rem 1.5rem;
+	padding: 0 1.75rem 1.75rem 1.75rem;
 		transition: linear 0.125s;
 }
 
