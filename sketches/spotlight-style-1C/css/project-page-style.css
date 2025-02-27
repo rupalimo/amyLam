@@ -146,7 +146,7 @@ a {
 }
 
 .project__sticky {
-	width: 18%;
+	width: 16%;
 	min-width: 200px;
 	position: -webkit-fixed;
 	position: fixed;
