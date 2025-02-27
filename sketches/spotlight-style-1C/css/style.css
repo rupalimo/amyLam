@@ -41,11 +41,11 @@
 	--text-color: #38383c;
 	--menu-color: #38383c;
 	--divider-color: #ececec;
-	--link-color: #6e39ff;
+	--link-color: #d61af1;
 	--disabled-color: #a2a7a7;
 	--buttonbk: #eef0f6;
-	--button-gradient: #5eec52;
-	--accent-color: #5eec52;
+	--button-gradient: #49ede5;
+	--accent-color:#49ede5;
 	--fade-in-effect: fadeIn 1s;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
 	font-size: 16px;

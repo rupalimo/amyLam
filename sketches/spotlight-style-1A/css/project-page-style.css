@@ -24,6 +24,7 @@
 	} */
 }
 
+
 :root {
 	--project-title-font: 'Iowan Old Style', serif;
 	--body-font: 'Barlow', sans-serif;
@@ -32,10 +33,10 @@
 	--category-font: 'VG500', monospace;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
 --text-color: #38383c;
-  --divider-color: #5eec52;
+  --divider-color: #49ede5;
   --menu-color: #38383c;
   --menubk-color: #ececec;
-  --link-color:  #6e39ff;
+  --link-color:  #d61af1;
   --disabled-color: #8c9292;
 	--fade-in-effect: fadeIn 1s;
 	font-size: 16px;
