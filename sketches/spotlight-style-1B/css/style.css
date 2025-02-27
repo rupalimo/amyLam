@@ -219,7 +219,7 @@ input[type='checkbox'] {
 
 input[type='checkbox']:checked {
 	position: relative;
-	background: url('../cross1.svg') no-repeat center;
+	background: url('../cross.svg') no-repeat center;
 	background-size: contain;
 	border: 1px solid var(--button-gradient);
 }

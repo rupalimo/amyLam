@@ -192,48 +192,45 @@ a {
 }
 
 label {
-	margin-left: 0.125rem;
 	font-size: 1.75rem;
 	line-height: 1.25;
 	font-family: var(--filter-font);
 }
 
-input[type='checkbox'] {
+input[type='checkbox'], input[type='checkbox']:checked {
+	margin: 0 0.25rem 0.25rem 0.25rem;
 	appearance: none; /* For modern browsers */
 	-webkit-appearance: none; /* Safari */
 	-moz-appearance: none; /* Firefox */
-	background-color: white;
-	border: 1px solid var(--disabled-color);
+	position: relative;
 	width: 20px;
 	height: 20px;
 	cursor: pointer;
-	display: inline-block;
+		display: inline-block;
 	vertical-align: middle;
 	border-radius: 0;
-	margin: 0 2px 3px 0.25rem;
+}
+
+input[type='checkbox'] {
+	background-color: white;
+	border: 1px solid var(--disabled-color);
 }
 
 /* Checked state */
 input[type='checkbox']:checked {
-	border-color: black;
+	border-color: var(--link-color);
 	position: relative;
 	background: url('../cross.svg') no-repeat center;
 	background-size: contain;
-	width: 20px;
-	height: 20px;
-	cursor: pointer;
-margin: 0 2px 3px 0.25rem;
 }
 
 input[type='checkbox'] + label {
 	color: var(--disabled-color);
 	letter-spacing: 0.03ch;
-	/* font-weight: bold; */
 }
 
 input[type='checkbox']:checked + label {
-	color: black;
-	/* letter-spacing: 0.1ch; */
+	color: var(--link-color);
 	letter-spacing: 0;
 	font-weight: bold;
 }
@@ -252,7 +249,7 @@ label:hover input[type='checkbox'] {
 }
 
 input[type='checkbox']:checked:hover {
-	box-shadow: var(--text-color) 0 0 1px 1px inset;
+	box-shadow: var(--link-color) 0 0 1px 1px inset;
 	cursor: pointer;
 }
 
@@ -379,8 +376,8 @@ input[type='checkbox']:checked:hover {
 
 .thumbnail:hover a,
 .thumbnail:hover .project--category {
-	color: var(--link-color);
-	border-color: var(--link-color);
+	/* color: var(--link-color);
+	border-color: var(--link-color); */
 }
 
 .thumbnail .project--category {
@@ -720,6 +717,14 @@ footer {
 		width: 33.3%;
 	}
 
+		.project--item:nth-of-type(4n + 2) {
+		border-left: 1px solid var(--divider-color);
+	}
+
+	.project--item:nth-of-type(3n + 2) {
+		border-left: 1px solid #fff;
+	}
+
 	.marquee-offset {
 		display: none;
 	}
@@ -810,13 +815,13 @@ footer {
 			border-left: 1px solid var(--divider-color);
 	}
 
-	.project--item:nth-of-type(4n + 2) {
+	.project--item:nth-of-type(3n + 2) {
 		border-left: 1px solid var(--divider-color);
 	}
 
 	.project--item:hover,
 	.thumbnail:hover,
-	.project--item:nth-of-type(4n + 2):hover {
+	.project--item:nth-of-type(3n + 2):hover {
 		border-style: none solid solid solid;
 		border-left: 1px solid var(--link-color);
 		border-right: 1px solid var(--link-color);

@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.41 17.41">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.94 18.94">
   <defs>
     <style>
       .cls-1 {
+        fill: #5eec52;
+      }
+
+      .cls-2 {
         fill: none;
-        stroke: #6e39ff;
+        stroke: #eef0f6;
+        stroke-linecap: round;
         stroke-miterlimit: 10;
-        stroke-width: 2px;
+        stroke-width: 3px;
       }
     </style>
   </defs>
-  <line class="cls-1" x1=".71" y1=".71" x2="16.71" y2="16.71"/>
-  <line class="cls-1" x1="16.71" y1=".71" x2=".71" y2="16.71"/>
+  <g id="Layer_3">
+    <rect class="cls-1" x=".02" y=".02" width="18.9" height="18.9"/>
+  </g>
+  <g id="Layer_1">
+    <g id="Layer_2">
+      <line class="cls-2" x1="3.06" y1="3.06" x2="15.99" y2="15.99"/>
+      <line class="cls-2" x1="15.99" y1="3.06" x2="3.06" y2="15.99"/>
+    </g>
+  </g>
 </svg>
