@@ -45,7 +45,7 @@
 	--disabled-color: #a2a7a7;
 	--buttonbk: #eef0f6;
 	--button-gradient: #49ede5;
-	--accent-color:#49ede5;
+	--accent-color: #49ede5;
 	--fade-in-effect: fadeIn 1s;
 	--font-size-sm: clamp(0.5rem, 0.45vi + 0.39rem, 0.75rem);
 	font-size: 16px;
@@ -179,7 +179,7 @@ a {
 
 .para__news,
 .para__press,
-.para__about  {
+.para__about {
 	padding: 1rem 2rem 1.5rem 2rem;
 }
 
@@ -206,7 +206,8 @@ label {
 	font-family: var(--filter-font);
 }
 
-input[type='checkbox'], input[type='checkbox']:checked {
+input[type='checkbox'],
+input[type='checkbox']:checked {
 	margin: 0 0.25rem 0.25rem 0.25rem;
 	appearance: none; /* For modern browsers */
 	-webkit-appearance: none; /* Safari */
@@ -215,7 +216,7 @@ input[type='checkbox'], input[type='checkbox']:checked {
 	width: 20px;
 	height: 20px;
 	cursor: pointer;
-		display: inline-block;
+	display: inline-block;
 	vertical-align: middle;
 	border-radius: 0;
 }
@@ -292,7 +293,6 @@ input[type='checkbox']:checked:hover {
 	margin: 1rem 0;
 }
 
-
 .spotlight__container .img__container img {
 	width: 100%;
 	height: auto;
@@ -322,7 +322,7 @@ input[type='checkbox']:checked:hover {
 	border-bottom: 1px dotted var(--link-color);
 	border-left: 1px solid var(--link-color);
 	padding: 0 1.75rem 1.75rem 1.75rem;
-		transition: linear 0.125s;
+	transition: linear 0.125s;
 }
 
 .thumbnail:hover .item--line {
@@ -483,7 +483,6 @@ input[type='checkbox']:checked:hover {
 .press--tab {
 	font-family: var(--menu-font);
 	font-size: 1.25rem;
-	width: 10vw;
 	color: var(--text-color);
 	text-align: center;
 	text-decoration: none;
@@ -492,15 +491,19 @@ input[type='checkbox']:checked:hover {
 }
 
 .news--tab {
-	min-width: 175px;
+	width: 10vw;
+	min-width: 120px;
+	max-width: 165px;
+}
+
+.press--tab {
+	width: 20vw;
+	min-width: 240px;
+	max-width: 330px;
 }
 
 news--tab:hover {
 	cursor: pointer;
-}
-
-.press--tab {
-	min-width: 350px;
 }
 
 .on {
@@ -666,16 +669,16 @@ footer {
 		width: 33.3%;
 	}
 
-		.project--item:nth-of-type(4n + 1) {
+	.project--item:nth-of-type(4n + 1) {
 		border-left: 1px solid var(--divider-color);
 	}
 
-.project--item:nth-of-type(3n + 1):hover {
-	border-bottom: 1px dotted var(--link-color);
-	border-left: 1px solid var(--link-color);
-	padding: 0 1.75rem 1.75rem 1.75rem;
+	.project--item:nth-of-type(3n + 1):hover {
+		border-bottom: 1px dotted var(--link-color);
+		border-left: 1px solid var(--link-color);
+		padding: 0 1.75rem 1.75rem 1.75rem;
 		transition: linear 0.125s;
-}
+	}
 
 	.project--item:nth-of-type(3n + 1) {
 		border-left: 1px solid #fff;
@@ -730,7 +733,7 @@ footer {
 		border-style: none solid solid solid;
 		border-right: 1px solid var(--divider-color);
 		border-bottom: 1px solid var(--divider-color);
-			border-left: 1px solid var(--divider-color);
+		border-left: 1px solid var(--divider-color);
 	}
 
 	.project--item:nth-of-type(3n + 1) {
@@ -824,11 +827,11 @@ footer {
 		padding: 1rem 0 1.5rem 0;
 	}
 
-
-	.thumbnail, .project--item:hover,
+	.thumbnail,
+	.project--item:hover,
 	.thumbnail:hover,
 	.project--item:nth-of-type(3n + 2):hover {
-			padding: 0 1rem 2rem 1em;
+		padding: 0 1rem 2rem 1em;
 	}
 
 	.tabitems {
